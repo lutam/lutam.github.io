@@ -1,0 +1,354 @@
+.grid {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4vw; }
+
+#introduction.grid {
+  height: 8vw;
+  width: 50vw; }
+
+#ludovico.grid {
+  height: 7.5vw;
+  width: 58.75vw; }
+
+.great_container {
+  position: relative;
+  display: inline-block;
+  width: 58.75vw;
+  margin-left: 20.625vw; }
+
+.letter {
+  float: left;
+  position: relative;
+  height: 100%; }
+
+.letter:last-child {
+  margin-right: 0 !important; }
+
+.square {
+  transition: all 0.2s linear;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: none;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color: black;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent; }
+
+.square.wleft {
+  border-left: 1px solid transparent; }
+
+.square.curved, .square.triangled {
+  border: 0;
+  border-top: 1px solid transparent;
+  background-color: transparent !important;
+  box-shadow: none; }
+
+.square.curved.htop, .square.curved.hmiddletop {
+  border-top: 0; }
+
+.square.curved::after, .square.triangled::after {
+  content: "";
+  background-color: black;
+  box-shadow: none;
+  display: inline-block;
+  position: relative;
+  border: 1px solid transparent;
+  box-sizing: border-box; }
+
+.square.curved.wright.htop {
+  border-bottom: 1px solid transparent; }
+
+.square.curved.wright:not(.reverse), .square.curved.wmiddle.hmiddlebottom, .square.curved.wmiddle.hbottom, .square.curved.wmiddle.hmiddletop, .square.triangled.wright {
+  border-left: 1px solid transparent; }
+
+.square.curved.wright.reverse {
+  border-left: 1px solid transparent; }
+
+.square.hbottom.wleft.curved, .square.hmiddletop.wleft.curved:not(.reverse), .square.hmiddletop.wleft.curved:not(.reverse) {
+  border-right: 1px solid black; }
+
+.square.hbottom.wleft.curved, .square.hmiddlebottom.wmiddle.curved, .square.hbottom.wright.curved, .square.hbottom.wmiddle.curved, .square.hbottom.wright.triangled, .square.hbottom.wleft.triangled {
+  border-top: 1px solid black; }
+
+.square.hmiddlebottom.wmiddle.curved, .square.hbottom.wright.curved, .square.htop.wright.curved:not(.reverse), .square.hmiddletop.wright.curved:not(.reverse), .square.hmiddletop.wmiddle.curved, .square.hbottom.wmiddle.curved, .square.hbottom.wright.triangled, .square.curved.wleft.reverse.hmiddletop {
+  border-left: 1px solid black; }
+
+.square.htop.wright.curved {
+  border-bottom: 1px solid black; }
+
+.square.triangled::after {
+  border-radius: 0;
+  transform: rotate(45deg); }
+
+.square.curved::after {
+  border-radius: 50%; }
+
+body.gameplay {
+  background-color: black;
+  position: fixed;
+  overflow: hidden; }
+  body.gameplay #bases, body.gameplay #starship {
+    display: block; }
+  body.gameplay #play {
+    display: none; }
+  body.gameplay .hostile_laser, body.gameplay .my_laser {
+    display: block; }
+  body.gameplay .square.hmiddletop.wright.curved.reverse {
+    border-left-color: black !important; }
+  body.gameplay .square, body.gameplay .square.curved::after, body.gameplay .square.triangled::after {
+    background-color: white; }
+  body.gameplay .square {
+    border-color: white !important; }
+  body.gameplay .base .square.triangled::after, body.gameplay .base .square {
+    background-color: #1dd1a1; }
+  body.gameplay #logo h1 {
+    display: none; }
+  body.gameplay #logo {
+    cursor: pointer;
+    border-color: white;
+    left: 90%; }
+  body.gameplay #logo::after {
+    content: "X";
+    color: WHITE;
+    font-weight: 500;
+    font-family: 'Quicksand', sans-serif;
+    display: table-cell;
+    font-size: 36px;
+    text-align: center;
+    vertical-align: middle; }
+
+#introduction .letter {
+  margin-right: 1vw; }
+
+#introduction .square {
+  width: 2vw;
+  height: 2vw; }
+
+#introduction .letter.one-spaced {
+  width: 2vw; }
+
+#introduction .letter.two-spaced {
+  width: 4vw; }
+
+#introduction .letter.three-spaced {
+  width: 6vw; }
+
+#introduction .square.htop {
+  top: 0; }
+
+#introduction .square.hmiddletop {
+  top: 2vw; }
+
+#introduction .square.hmiddlebottom {
+  top: 4vw; }
+
+#introduction .square.hbottom {
+  top: 6vw; }
+
+#introduction .square.wleft, #introduction #comma .square.wright {
+  left: 0; }
+
+#introduction .square.wmiddle {
+  left: 2vw; }
+
+#introduction .square.wright {
+  left: 4vw; }
+
+#introduction .square.curved::after, #introduction .square.triangled::after {
+  width: 4vw;
+  height: 4vw; }
+
+#introduction .square.hbottom.wleft.curved::after {
+  left: 0;
+  top: -2vw; }
+
+#introduction .square.hbottom.wright.curved::after, #introduction .square.hbottom.wmiddle.curved::after, #introduction .square.hmiddlebottom.wmiddle.curved::after {
+  left: -2vw;
+  top: -2vw; }
+
+#introduction .square.htop.wright.curved::after, #introduction .square.hmiddletop.wmiddle.curved::after, #introduction .square.hmiddletop.wright.curved:not(.reverse)::after, #introduction .square.hmiddletop.wleft.reverse.curved::after {
+  top: 0;
+  left: -2vw; }
+
+#introduction .square.wleft.triangled::after {
+  left: 0.82843vw;
+  top: -2vw; }
+
+#introduction .square.wright.triangled::after {
+  top: -2vw;
+  left: -2.82843vw; }
+
+#ludovico .letter {
+  margin-right: 1.25vw; }
+
+#ludovico .square {
+  width: 2.5vw;
+  height: 2.5vw; }
+
+#ludovico .letter.one-spaced {
+  width: 2.5vw; }
+
+#ludovico .letter.two-spaced {
+  width: 5vw; }
+
+#ludovico .letter.three-spaced {
+  width: 7.5vw; }
+
+#ludovico .square.htop {
+  top: 0; }
+
+#ludovico .square.hmiddle {
+  top: 2.5vw; }
+
+#ludovico .square.hbottom {
+  top: 5vw; }
+
+#ludovico .square.wleft {
+  left: 0; }
+
+#ludovico .square.wmiddle {
+  left: 2.5vw; }
+
+#ludovico .square.wright {
+  left: 5vw; }
+
+#ludovico .square.curved::after, #ludovico .square.triangled::after {
+  width: 5vw;
+  height: 5vw; }
+
+#ludovico .square.hbottom.wleft.curved::after {
+  left: 0;
+  top: -2.5vw; }
+
+#ludovico .square.hbottom.wright.curved::after {
+  left: -2.5vw;
+  top: -2.5vw; }
+
+#ludovico .square.htop.wright.curved::after {
+  top: 0;
+  left: -2.5vw; }
+
+#ludovico .square.wleft.triangled::after {
+  left: 1.03553vw;
+  top: -2.5vw; }
+
+#ludovico .square.wright.triangled::after {
+  top: -2.5vw;
+  left: -3.53553vw; }
+
+#bases {
+  width: 80vw;
+  display: inline-block;
+  margin-left: 10vw;
+  height: 5.25vw;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  display: none; }
+
+.base {
+  float: left;
+  position: relative;
+  width: 14vw;
+  height: 5.25vw;
+  margin-right: 8vw; }
+
+.base .square {
+  border: 0 !important;
+  background-color: green;
+  width: 3.5vw;
+  height: 1.75vw; }
+
+.base .square.wleft {
+  left: 0; }
+
+.base .square.wmiddleleft {
+  left: 3.5vw; }
+
+.base .square.wmiddleright {
+  left: 7vw; }
+
+.base .square.wright {
+  left: 10.5vw; }
+
+.base .square.htop {
+  top: 0; }
+
+.base .square.hmiddle {
+  top: 1.75vw; }
+
+.base .square.hbottom {
+  top: 3.5vw; }
+
+.base .square.triangled {
+  background-color: transparent; }
+
+.base .square.triangled::after, .base .square.triangled::after {
+  display: block;
+  position: relative;
+  content: "";
+  transform: rotate(-45deg);
+  background-color: green;
+  width: 7vw;
+  height: 7vw; }
+
+.base .square.wmiddleleft.hmiddle::after {
+  top: -4.94975vw;
+  left: -3.5vw; }
+
+.base .square.wmiddleright.hmiddle::after {
+  top: -3.5vw;
+  left: 1.44975vw; }
+
+.base .square.wright.htop::after {
+  left: -4.94975vw; }
+
+.base .square.wleft.htop::after {
+  left: 1.44975vw; }
+
+#starship {
+  font-size: 3vw;
+  color: white;
+  width: 4vw;
+  height: 4vw;
+  position: absolute;
+  display: block;
+  left: 48vw;
+  display: none; }
+
+#starship i {
+  transform: rotate(-90deg); }
+
+#play {
+  width: 219px;
+  background-color: #3498db;
+  font-family: 'Quicksand', sans-serif;
+  color: #e9edef;
+  display: block;
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 17px; }
+
+.base:last-child {
+  margin-right: 0; }
+
+.hostile_laser, .my_laser {
+  display: none;
+  z-index: 9;
+  width: 6px;
+  height: 20px;
+  background-color: blue;
+  position: fixed; }
+
+.my_laser {
+  background-color: yellow; }

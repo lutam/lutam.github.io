@@ -1,0 +1,157 @@
+$introduction_width: 2vw;
+$ludovico_width: 2.5vw;
+$border_color:transparent;
+$letter_color: black;
+$letter_color_active: white;
+$letter_shadow: none;
+$bases_width:40;
+$bases_margin:4;
+$base_width : ($introduction_width*$bases_width - $introduction_width*3*$bases_margin)/16;
+
+.grid{  display: block; margin-left: auto; margin-right: auto; margin-bottom: 4vw; }
+#introduction.grid{ height: $introduction_width*4; width: $introduction_width*25;}
+#ludovico.grid{ height: $ludovico_width*3; width: $ludovico_width*23.5; }
+
+.great_container{ position:relative; display:inline-block; width: $ludovico_width*23.5; margin-left: (100-$ludovico_width*23.5)/2; }
+
+
+.letter{  float:left; position:relative; height: 100%;  }
+.letter:last-child{ margin-right: 0 !important; }
+.square{ transition: all 0.2s linear ; box-sizing:border-box; overflow:hidden; box-shadow: $letter_shadow; width: 30px; height: 30px; position:absolute; background-color: $letter_color; border-top:1px solid $border_color; border-right: 1px solid $border_color; }
+.square{
+	&.wleft{ border-left: 1px solid $border_color; }
+	&.curved, &.triangled{ border:0; border-top:1px solid $border_color; background-color: transparent !important; box-shadow: none; }
+	&.curved.htop, &.curved.hmiddletop{ border-top:0; }
+	&.curved::after, &.triangled::after{ content: ""; background-color: $letter_color; box-shadow: $letter_shadow; display: inline-block; position: relative; border: 1px solid $border_color; box-sizing: border-box; }
+	&.curved.wright.htop{ border-bottom: 1px solid $border_color; }
+
+	&.curved.wright:not(.reverse), &.curved.wmiddle.hmiddlebottom, &.curved.wmiddle.hbottom,  &.curved.wmiddle.hmiddletop, &.triangled.wright{ border-left: 1px solid $border_color; }
+	&.curved.wright.reverse { border-left: 1px solid transparent ; }
+	&.hbottom.wleft.curved, &.hmiddletop.wleft.curved:not(.reverse), &.hmiddletop.wleft.curved:not(.reverse){ border-right: 1px solid $letter_color; }
+	&.hbottom.wleft.curved, &.hmiddlebottom.wmiddle.curved, &.hbottom.wright.curved, &.hbottom.wmiddle.curved, &.hbottom.wright.triangled, &.hbottom.wleft.triangled{ border-top:1px solid $letter_color; }
+	&.hmiddlebottom.wmiddle.curved, &.hbottom.wright.curved, , &.htop.wright.curved:not(.reverse), &.hmiddletop.wright.curved:not(.reverse), &.hmiddletop.wmiddle.curved, &.hbottom.wmiddle.curved, &.hbottom.wright.triangled, &.curved.wleft.reverse.hmiddletop{ border-left:1px solid $letter_color; }
+	&.htop.wright.curved{ border-bottom:1px solid $letter_color; }
+	&.triangled::after{ border-radius: 0; transform: rotate(45deg); }
+	&.curved::after{ border-radius: 50%; }
+	
+
+	}
+
+
+body.gameplay {
+	background-color: black; position: fixed; overflow: hidden;
+	#bases, #starship{ display: block; }
+	#play{ display: none; }
+	.hostile_laser, .my_laser{ display: block; }
+	.square.hmiddletop.wright.curved.reverse{ border-left-color: black !important; }
+	.square, .square.curved::after, .square.triangled::after{ background-color: $letter_color_active; }
+	.square{ border-color:$letter_color_active !important; }
+
+	.base .square.triangled::after, .base .square{ background-color:#1dd1a1; }
+
+	#logo h1{ display: none; }
+	#logo{ cursor:pointer; border-color: white; left:90%;  }
+ 	#logo::after{ content: "X"; color: WHITE; font-weight: 500; font-family: 'Quicksand', sans-serif; display: table-cell; font-size: 36px; text-align: center; vertical-align: middle; }
+	
+
+}
+#introduction{ 
+	.letter{ margin-right: $introduction_width/2; }
+	.square{ width: $introduction_width; height:$introduction_width; }
+	.letter.one-spaced{ width: $introduction_width; }
+	.letter.two-spaced{ width: $introduction_width*2; }
+	.letter.three-spaced{ width: $introduction_width*3; }
+	.square.htop{ top: 0; }
+	.square.hmiddletop{ top: $introduction_width; }
+	.square.hmiddlebottom{ top: $introduction_width*2; }
+	.square.hbottom{ top:  $introduction_width*3; }
+	.square.wleft, #comma .square.wright{left: 0;}
+	.square.wmiddle{ left: $introduction_width; }
+	.square.wright{ left: $introduction_width*2 }
+	.square.curved::after, .square.triangled::after{  width: $introduction_width*2; height: $introduction_width*2; }
+	.square.hbottom.wleft.curved::after{ left: 0; top: -1*$introduction_width;  }
+	.square.hbottom.wright.curved::after, .square.hbottom.wmiddle.curved::after, .square.hmiddlebottom.wmiddle.curved::after{ left: -1*$introduction_width; top: -1*$introduction_width; }
+	.square.htop.wright.curved::after, .square.hmiddletop.wmiddle.curved::after, .square.hmiddletop.wright.curved:not(.reverse)::after, .square.hmiddletop.wleft.reverse.curved::after{ top:0; left: -1*$introduction_width; }
+	.square.wleft.triangled::after{ left: $introduction_width*0.414213562; top: -1*$introduction_width; }
+	.square.wright.triangled::after{ top: -1*$introduction_width; left: -1*$introduction_width*1.414213562; }
+
+
+}
+
+
+
+#ludovico {
+		.letter{ margin-right: $ludovico_width/2; }
+		.square{ width: $ludovico_width; height:$ludovico_width; }
+		.letter.one-spaced{ width: $ludovico_width; }
+		.letter.two-spaced{ width: $ludovico_width*2; }
+		.letter.three-spaced{ width: $ludovico_width*3; }
+		.square.htop{ top: 0; }
+		.square.hmiddle{ top: $ludovico_width; }
+		.square.hbottom{ top: $ludovico_width*2; }
+		.square.wleft{left: 0;}
+		.square.wmiddle{ left: $ludovico_width; }
+		.square.wright{ left: $ludovico_width*2 }
+		.square.curved::after, .square.triangled::after{  width: $ludovico_width*2; height: $ludovico_width*2; }
+		.square.hbottom.wleft.curved::after{ left: 0; top: -1*$ludovico_width;  }
+		.square.hbottom.wright.curved::after { left: -1*$ludovico_width; top: -1*$ludovico_width; }
+		.square.htop.wright.curved::after{ top:0; left: -1*$ludovico_width; }
+		.square.wleft.triangled::after{ left: $ludovico_width*0.414213562; top: -1*$ludovico_width; }
+		.square.wright.triangled::after{ top: -1*$ludovico_width; left: -1*$ludovico_width*1.414213562; }
+}
+
+
+
+#bases{ width: $introduction_width*$bases_width; display: inline-block; margin-left: (100-$introduction_width*$bases_width)/2; height: $base_width*1.5; margin-top:10vh; margin-bottom: 10vh; display: none;}
+
+
+.base{  float: left; position:relative; width: ($introduction_width*$bases_width - $introduction_width*3*$bases_margin)/4; height: $base_width*1.5; margin-right: $introduction_width*$bases_margin; }
+.base{
+
+	.square{  border:0 !important; background-color: green;  width: $base_width; height: $base_width/2; }
+	.square{
+		&.wleft{ left: 0; }
+		&.wmiddleleft{ left: $base_width; }
+		&.wmiddleright{ left: $base_width*2; }
+		&.wright{ left: $base_width*3; }
+		&.htop{ top:0; }
+		&.hmiddle{ top: $base_width/2; }
+		&.hbottom{ top: $base_width; }
+
+		&.triangled{ background-color: transparent; }
+		&.triangled::after, &.triangled::after{ display: block; position: relative; content: ""; transform: rotate(-45deg); background-color: green; width: 2*$base_width; height: 2*$base_width;  }
+		&.wmiddleleft.hmiddle::after{ top: -1*1.414213562*$base_width;  left: -1* $base_width; }
+		&.wmiddleright.hmiddle::after{ top: -1*$base_width;  left: 0.414213562*$base_width; }
+		&.wright.htop::after{ left: -1*1.414213562*$base_width; }
+		&.wleft.htop::after{ left: 0.414213562*$base_width; }
+
+	}
+}
+
+		#starship{   font-size: 3vw; color: white; width: 2*$introduction_width; height: 2*$introduction_width; position:absolute; display: block; left: (100 - $introduction_width*2)/2; display: none; }
+		#starship i{ transform: rotate(-90deg); }
+
+
+#play{     width: 219px;
+    background-color: #3498db;
+
+
+    font-family: 'Quicksand', sans-serif;
+
+    color: #e9edef;
+    display: block;
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 17px;
+} 
+
+		.base:last-child{ margin-right: 0; }
+		.hostile_laser, .my_laser{ display:none; z-index:9; width: 6px; height: 20px; background-color: blue; position: fixed; }
+		.my_laser{  background-color: yellow; }
