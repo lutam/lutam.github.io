@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Generatore automatico di versi di Vasco Brondi</title>
+<meta name="viewport" content="width=device-width">
+		<meta charset="utf-8" />
+		<meta name="description" content="Genera automaticamente frasi nello stile di Vasco Brondi delle Luci della Centrale Elettrica" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="icon" href="favicon.ico" type="image/x-icon" /> 
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	
+	<!--[if lt IE 9]><script src="html5shiv.js"></script><![endif]-->
+
+
+
+
+
+<style>
+
+	@font-face {
+    font-family: 'shortcutregular';
+    src: url('shortcut-webfont.woff2') format('woff2'),
+         url('shortcut-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+	@font-face {
+    font-family: 'bebas_neuebold';
+    src: url(bebasneue_bold-webfont.eot);
+    src: url(bebasneue_bold-webfont.eot?#iefix) format('embedded-opentype'),
+         url(bebasneue_bold-webfont.woff2) format('woff2'),
+         url(bebasneue_bold-webfont.woff) format('woff'),
+         url(bebasneue_bold-webfont.ttf) format('truetype'),
+         url(bebasneue_bold-webfont.svg#bebas_neuebold) format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+	@font-face {
+    font-family: 'cabinregular';
+    src: url('cabin-regular-webfont.woff2') format('woff2'),
+         url('cabin-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+	
+
+@font-face {
+    font-family: 'intro_regular';
+    src: url('introrustg-base2line-webfont.woff2') format('woff2'),
+         url('introrustg-base2line-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+    font-family: 'kaushan_scriptregular';
+    src: url('kaushanscript-regular-webfont.woff2') format('woff2'),
+         url('kaushanscript-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+	a:active, a:focus, button:active, button:focus{
+		outline:none;
+	} 
+	*{padding:0; margin:0; outline:none;}
+	body{border-top:4px #e74c3c solid; font-size:25px; background-color:#f6f6f6; overflow-x:hidden;}
+	h1{  font-family: 'intro_regular'; color:#303030; font-size:0.8em;}
+	a{color:#e74c3c; }
+	a:hover{text-decoration:none; color:#c0392b;}
+	span.h1{font-family: 'bebas_neuebold'; display:block; margin-left: 30%; color:#e74c3c; font-size:2.2em;}
+	header.title{ width:70%; padding-left:15%; padding-top:1%; }
+	header.ad{width:30%; float:left; padding-top:1%;}
+	main{text-align:center; width:100%;}
+	p.verso{ background-color:white; padding-top:1%; padding-bottom:1%; font-family: 'kaushan_scriptregular'; margin-top:3%; width:80%; margin-left:10%; text-align:center;  color:#333; font-size:1.5em;}
+	button.nuovo{min-width:200px; background-color:#e74c3c; width:20%; margin-left:auto; margin-top:4%; font-size:1.2em; padding:2px 2% 1px 2%; font-family: 'bebas_neuebold'; color:white; border:none; cursor:pointer; }
+	button.nuovo:hover{background-color:#c0392b;}
+	footer{width:100%; margin-top:10%;   text-align:center; }
+	ul{display: -webkit-box;      
+
+  display: -moz-box;         
+  display: -ms-flexbox;      
+  display: -webkit-flex; 
+  display: flex;
+  -webkit-justify-content:center; -ms-justify-content:center; justify-content:center;    
+    width:90%; margin-left:5%; }
+	li{list-style-type:none; }
+	button.extra{border:none; background-color:transparent; color:#e74c3c; cursor:pointer; }
+	button.extra:hover{text-decoration:underline;}
+	div.wrapper{position:absolute;  font-family: 'cabinregular'; display:none; z-index:23; background-color:#ebebeb; border-bottom:30px #e74c3c solid; padding:1% 5%; width:90%; }
+	#ad{width:70%; margin-top: 10%; padding-left:15%;   display: -webkit-box;      
+  display: -moz-box;         
+  display: -ms-flexbox;      
+  display: -webkit-flex;   
+  display: flex;  
+    justify-content:space-around; -webkit-justify-content:space-around; -ms-justify-content:space-around;  }
+	iframe.frame{border:none; float: left;}
+	#maiun{ font-family: 'shortcutregular'; font-size: 1em;text-align:center; }
+	h3{color:#e74c3c; font-size:0.7em; margin-top:7%; text-align:center; font-family:'intro_regular'; }
+
+	@media only screen and (max-width: 940px)  {
+		#ad{width:100%; padding-left:0;}
+	}
+@media only screen and (max-width: 745px) {
+		h3{width:80%; margin-left:10%; margin-top:2%;  }
+		#ad{display:inline-block; text-align:center;}
+		header.ad{width:100%; text-align:center;}		
+}
+
+@media only screen and (max-width: 472px){
+
+span.h1{margin-left:5%; width:90%; }
+header.title{ width:100%; padding-left:0; text-align:center; }
+}
+@media only screen and (max-width: 362px){
+
+span.h1{font-size:2em; width:100%; }
+}
+	
+</style>
+
+</head>
+<body>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-551c81bf6462f377" async="async"></script>
+
+
+
+<div id="seriamente" class="wrapper" >
+ <h1 style="display:inline;" ><i>generatore automatico di versi di <strong>Vasco Brondi</strong> </i></h1>  è un'applicazione che <h2 style="display:inline; font-size:1em;">unisce casualmente frammenti delle canzoni delle <strong>Luci della Centrale Elettrica</strong> </h2>.<p> <br/>A parte questo non ha nessun rapporto con Vasco Brondi nè con la sua etichetta discografica.<br /><br/>
+Il risultato del generatore a volte è divertente e a volte no.<br/>
+In entrambi i casi si tratta una <strong>genuina cagata goliardica</strong> realizzata da un fan delle <i>Luci</i> che non vuole nè offendere nè criticare, ma solo scherzare sui testi di Vasco che si prestano particolarmente bene a formare frasi assurde.<br/>
+Se proprio non ti piace ce lo puoi comunicare attraverso i contatti messi a disposizione.
+<br/>
+In giro c'è una cosa simile, ma non fa molto ridere ed è fatto da qualche preso male che evidentemente non gradisce particolarmente le <i>Luci della centrale elettrica</i>.
+<br/><br/>
+Il sito è autorizzato da Amazon EU all'inserzione di annunci e promuove e sostiene la vendita <strong>legale</strong> di musica di qualità. <br/>
+<button id="serio_b" class="nuovo">OK</button>
+</p>
+</div>
+
+<div id="crediti" class="wrapper" >
+<!-- <h1 style="display:inline;" ><i>generatore automatico di versi di Vasco Brondi </i></h1>  è stato interamente realizzato da <strong>me</strong> .<br/>
+Per la cronaca: nella vita faccio anche cose serie.<br/><br/>
+-->
+
+I crediti per i font vanno a:<br/>
+<p style="font-family: 'shortcutregular'; display:inline;">Shortcut</p> by <a href="http://www.misprintedtype.com" target="_blank">Misprinted Type</a><br/>
+<p style="font-family: 'kaushan_scriptregular'; display:inline;">Kaushan Script</p> and <p style="font-family: 'cabinregular'; display:inline;">Cabin</p> by <a href="http://www.impallari.com/" target="_blank">Impallari</a><br/>
+<p style="font-family: 'bebas_neuebold'; display:inline;">Bebas Neue</p> and <p style="font-family: 'intro_regular'; display:inline;">Intro</p> by <a href="http://www.fontfabric.com/" target="_blank">Font Fabric</a><br/>
+ 
+Tutti i webfont sono generati con <a href="http://www.fontsquirrel.com/" target="_blank">Font Squirrel</a>
+
+
+
+<br/><br/>
+La barra dei social è realizzata da <a href="https://www.addthis.com" target="_blank">addthis.com</a><br/><br/>
+Quasi tutti i frammenti sono di canzoni di <a href="http://www.leluci.org" target="_blank">Vasco Brondi</a><br/><br/>
+<br>
+Probabilmente il sito utilizza cookie, non saprei dire a che scopo.
+<br>
+
+
+
+
+<button id="credits_b" class="nuovo">OK</button>
+
+</div>
+
+
+<div id="contatti" class="wrapper" >
+ -vuoi dirmi che il generatore non fa ridere?<br/>
+
+ -vuoi dirmi che ho violato qualche legge federale e che stanno venendo a prendermi?<br/>
+ -sei uno di quei poveri robot che si annoia perchè non riesce a iscriversi a nessun sito per via dei captcha e vuoi mandarmi pubblicità così giusto per ammazzare il tempo?<br/>
+ -sei Vasco Brondi che, bravo è bravo, ma senso dell'umorismo...<br/>
+ -non hai capito che non sono davvero Vasco Brondi e vuoi mandargli una tua foto nuda?<br/>
+-vuoi farmi notare che segui <i>Vasco</i> dai tempi di <i>Vita spericolata</i> ma non conosci nessuno dei frammenti citati?
+<br/>
+Per queste o per altre ragioni più improbabili, <br/>
+  <span style="font-size:2em; font-family: 'bebas_neuebold';">SCRIVIMI PURE:</span><br/> 
+email: vascobrondigenerator@altervista.org <br/>
+facebook :<a href="https://www.facebook.com/pages/Generatore-automatico-di-versi-di-Vasco-Brondi/935759489792308?skip_nax_wizard=true&ref_type=logout_gear" target="_blank">generatore</a>
+<br/>
+<button id="contacts_b" class="nuovo">OK</button>
+
+</div>
+
+
+<header class="title">
+<h1> generatore automatico di versi di <span class="h1">Vasco Brondi.</span></h1>
+</header>
+<main>
+<p class="verso">&ldquo;<span id="quote">
+
+</span>&rdquo;</p>
+
+<div style="width:100%; text-align:center;">
+<button onclick="nuovo()" class="nuovo">genera nuovo</button>
+</div>
+
+
+<section id="ad">
+<header  class="ad"><p id="maiun" ></p>  
+<h3>smettila di scaricarti pure tua mamma e compralo un CD ogni tanto</h3></header>
+<iframe class="frame" src="http://rcm-eu.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=E74C3C&amp;t=studentiunimi-21&amp;o=29&amp;p=8&amp;l=as1&amp;m=amazon&amp;f=ifr&amp;ref=tf_til&amp;asins=B00IA9XTQU" style="width:120px;height:240px;"></iframe>
+
+<iframe class="frame" src="http://rcm-eu.amazon-adsystem.com/e/cm?t=studentiunimi-21&amp;o=29&amp;p=8&amp;l=as1&amp;asins=B00IA9XTPG&amp;ref=tf_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=E74C3C&amp;bc1=FFFFFF&amp;bg1=FFFFFF&amp;f=ifr" style="width:120px;height:240px;" ></iframe>
+
+<iframe class="frame ter" src="http://rcm-eu.amazon-adsystem.com/e/cm?t=studentiunimi-21&amp;o=29&amp;p=8&amp;l=as1&amp;asins=B00IA9XTQA&amp;ref=tf_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=E74C3C&amp;bc1=FFFFFF&amp;bg1=FFFFFF&amp;f=ifr" style="width:120px;height:240px;" ></iframe>
+
+<iframe class="frame" src="http://rcm-eu.amazon-adsystem.com/e/cm?t=studentiunimi-21&amp;o=29&amp;p=8&amp;l=as1&amp;asins=B00IA9XTME&amp;ref=tf_til&amp;fc1=000000&amp;IS2=1&amp;lt1=_blank&amp;m=amazon&amp;lc1=E74C3C&amp;bc1=FFFFFF&amp;bg1=FFFFFF&amp;f=ifr" style="width:120px;height:240px;" ></iframe>
+
+
+</section>
+</main>
+<footer >
+<ul>
+    <?php /*
+	<li>
+		<button id="serio_f" class='extra'>seriamente</button> 
+	</li>*/ ?>
+	<li>
+		<button id="credits_f" style="margin-left:10px; margin-right:10px;" class='extra'>crediti</button>
+	</li> 
+
+	<li style="display: none;">
+		<button id="contacts_f" class='extra'>contatti</button>
+	</li> 
+</ul>
+</footer>
+
+
+<script type="text/javascript" src="jq111.js"></script>
+<script type="text/javascript">
+
+function cap(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+
+
+	var primo= ["i tuoi discorsi seri", "questi periodi neri", "Tre operai, quattro camerieri, cinque studenti, sei nullafacenti", "quei momenti","i CCCP", "i pesci rossi",  "i crocifissi", "sui cavi della luce", "i distributori di sigarette fosforescenti", "appalti e subappalti", "i cadaveri degli astronauti", "i gatti con l'AIDS","i battiti cardiaci", "i cassonetti in fiamme", "i nostri organi", "i fuochi artificiali", "i tuoi amici", "i fiori", "i voli", "nei nostri sogni","i nostri venerdì sera",  "i nostri patti",  "i nostri pomeriggi", "nei parchi", "i nostri alibi", "i cigni finti", "i colori delle ciminiere dall'alto dei nostri elicotteri immaginari", "i fuochi dei tramonti", "i tuoi orecchini", "questi materassi",  "questi deserti", "i tuoi messaggi d'amore", "questi volti", "gli occhi azzurri", "i fondali oceanici", "i cieli autunnali", "i nostri abbracci", "i tuoi tumori", "i tuoi manuali", "i nostri migliori anni", "i sacchetti di plastica", "i pianeti", "i tuoi sogni infranti", "questi cieli", "i tuoi viaggi", "i bar chiusi",  "i ragazzi", "i caffè", "i nostri corpi", "i tuoi progetti",  "i tuoi fiori finti", "i tuoi insulti", "i tuoi segreti", "tutti i nostri no", "i tram",  "negli abbracci", "gli strascichi delle nostre ombre lunghe", "spareremo dei forse",  "questi cazzo di anni zero", "i tuoi pianti", "gli aerei", "nei bar deserti", "i cieli" , "negli scompartimenti","negli appartamenti", "tra i futuri più probabili", "esperti di marketing", "camion che passano", "due che si baciano", "dai voli aerei", "i tramonti",  "gli sguardi", "i nostri pochi orgasmi", "gli amori", "i tuoi capelli"   ];
+	var secondo= [" ", "spogli", "caduti", "ubriachi", "smantellati", "che ci siamo comprati", "accesi","aperti", "corretti", "dipinti", "subaffittati", "parcheggiati","svolazzanti",  "persi",  "che hanno perso delle lettere", "alla deriva", "avanzati", "scoperti", "licenziati", "rotti", "sciolti", "armati", "appesi", "investiti", "scritti", "sofferti", "persi sotto i lampi del Messico", "morti negli incidenti stradali", "morti negli incidenti stradali", "di kriptonite", "elettrici",   "che non sono esplosi", "che come te vanno per deserti", "che dormono in macchina", " che sono morti come sono vissuti", "imbrattati", "disinnescati", "ristrutturati", "protetti", "biodegradati", "inchiodati", "visti", "impiccati", "morti a Caserta", "rottamati",  "vissuti","morti", "intercettati", "freddi e luminosi", "strafatti", "scarichi", "bruciati", "affogati", "bagnati", "esposti", "addormentati", "chiusi", "che si richiudono", "truccati", "asfaltati", "scappati dai condomini", "arrugginiti", "in vendita", "enormi", "minuscoli", "precari", "si sono innamorati", "si sono scontrati", "si sono persi", "e i pesci rossi", "sono rimasti chiusi", "non escono", "camminano", "si spogliano" ];
+	var terzo= [ "per un'emoraggia interna", "anche in questa strada che ha il nome di una santa, in questo aprile che sembra dicembre", "sulla costa del mare in tempesta", "solo dai fiorai",  "come nei film melodrammatici di merda", ", l'Emilia, la Luna, io e te", "per rincorrere i tir",   "come nei brutti film", "per accenderti le sigarette con i fulmini","a 40 km", "deportati in Siberia mentre ti addormenti", "che raccolgono la spazzatura alle sei di mattina", "con materiali fragili e preziosi", "senza sapere come si fa","nei viali di Bologna",  "all'estero",  "come ha visto in certi posti dell'Africa", "ai funerali di Berlinguer", "erano sempre lì a sorriderci", "che si vedono di notte in Nord Europa", "che diventano pavimenti",  "sotto il mar Adriatico", "sui muri", "come Macbeth", "tra la ferrovia e la nuova moschea", "come le sigarette",  "nei temporali",  "dai cassonetti",  "come Mussolini", "degli alberghi" , "per gli autovelox", "bombardano l'Iran", "su viale Padova", "dai gatti", "appena fuori Cracovia", "in questi cieli neri", "nei call center", "nel tuo reggiseno", "tra i fumi dello smog", "sull'autostrada del sole", "delle case popolari", "come fili scoperti", "al discount", "a Venezia", "nei garage a Milano nord", "al contrario", "cianotici", "nella pioggia", "nella nebbia", "a Londra","come le mine", "parcheggiati male", "sui translatlantici", "nei campi", "per un difetto di fabbricazione", "dai camionisti addormentati",  "delle centrali nucleari", "come l'edera", "della centrale elettrica", "negli elenchi telefonici", "sui nostri conti correnti", "in un ufficio pubblico", "nelle nostre notti bianche",  "come se stessero correndo", "che hanno dei colori chimici", "del nostro amore", "dei magrebbini", "come le stazioni", "che da lontano ci sembravano degli applausi", "perchè preferiamo perdere", "delle raffinerie di Ravenna", "sotto i portici", "di Chernobyl", "per prendere il Sole e rivenderlo a qualche spacciatore", "negli inceneritori", "per non inquinare", "all'ufficio degli oggetti smarriti", "da qualche parte", "dai democristiani", "sono in cassa integrazione", "per deridermi",  "non ci sono più", "per le tue guerre stellari", "non hanno fatto feriti", "sui Navigli", "e poliziotti di quartiere", "per ammazzare il tempo", "del mio intestino tenue", "tra i cigni finti", "dal ministro dei temporali" ];
+
+
+
+function nuovo() {
+	var np= Math.floor((Math.random() * primo.length));
+	var nnp=Math.floor((Math.random() * primo.length));
+var ns= Math.floor((Math.random() * secondo.length));
+var nt= Math.floor((Math.random() * terzo.length) );
+	var frase=cap(primo[np])+" "+secondo[ns]+" "+terzo[nt];
+	$("#quote").text(frase);
+	$("#maiun").text("ruberesti mai "+primo[nnp]+"?");
+	
+
+
+}
+
+
+$(document).ready(function () {
+		var wrapper= document.getElementsByClassName("wrapper"); 
+		var altezza=$(document).height()*(1.3);
+		
+		var margine=(-1*altezza-50);
+		$(wrapper).css({"height": altezza, "margin-top": -1*altezza });
+		
+		nuovo();
+
+
+		
+		$("#serio_f").click(function () { 
+				$("#seriamente").fadeIn();
+				 $("#seriamente").animate({ "margin-top":0}, 1000 ); 
+				
+				});
+				 
+		$("#serio_b").click(function () {
+				 $("#seriamente").animate({ marginTop: margine}, 1000 );  $("#seriamente").fadeOut();});
+		$("#credits_f").click(function () { $("#crediti").fadeIn();
+				 $("#crediti").animate({ marginTop:'0'}, 1000 ); });
+		$("#credits_b").click(function () {
+				 $("#crediti").animate({ marginTop: margine}, 1000 ); $("#crediti").fadeOut(); });
+		$("#contacts_f").click(function () { $('#contatti').fadeIn();
+				 $("#contatti").animate({ marginTop:'0'}, 1000 ); });
+		$("#contacts_b").click(function () {
+				 $("#contatti").animate({ marginTop: margine}, 1000 ); $('#contatti').fadeOut(); });
+			
+		
+		
+		
+	
+		
+		
+				
+							
+				
+		
+		
+});
+
+
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59509018-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>
+<?php
+
+
+ ?>

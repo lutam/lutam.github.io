@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BALOONS</title>
+  <!-- Fogli di stile -->
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+
+ 
+
+</head>
+
+<style type="text/css">
+*{margin: 0; padding: 0;}
+body{ min-height: 1000px;  overflow-x:hidden; height: auto;}
+.bj{
+	 box-shadow:2px 2px 2px black; display: block;
+	height: 200px;  box-sizing:border-box;width:99.5%; background:white; height:200px;
+}
+
+.bj:hover{
+	background:#cccccc;
+	 box-shadow:none;
+}
+
+.col-md-6{
+	margin-top: 10px;
+}
+
+h2{ color: black; margin-top:13%; font-size: 35px; }
+a{color: black;}
+</style>
+<body style="height:100%; position:relative; overflow-x:hidden;">
+
+<div id='pallarossa' style="width:200px; z-index:99; height:200px; background:rgba(246,79, 79, 1); position:absolute; border-radius:50%">
+		<div style="width:100px; height:100px; position:relative; border-radius:50% ;top:30px; left:20px; background: radial-gradient(white 1%, rgba(246,79,79,1) 50%,rgba(246,79,79,1) 49% );">
+		</div>
+</div>
+
+<div id='pallablu' style="width:350px; z-index:98; height:350px; background:rgba(89,89, 220, 1); position:absolute; border-radius:50%">
+		<div style="width:180px; height:180px; position:relative; border-radius:50% ;top:40px; left:40px; background: radial-gradient(white 1%, rgba(89,89, 220, 1) 50%,rgba(89,89, 220, 1) 49% );">
+		</div>
+</div>
+
+<div id='pallaverde' style="width:300px; z-index:97; height:300px; background:rgba(74,221, 84, 1); position:absolute; border-radius:50%">
+		<div style="width:140px; height:140px; position:relative; border-radius:50% ;top:30px; left:30px; background: radial-gradient(white 1%, rgba(74,221, 84, 1) 50%,rgba(74,221, 84, 1) 49% );">
+		</div>
+</div>
+
+<div id='pallagialla' style="width:250px; z-index:96; height:250px; background:rgba(252,186, 61, 1); position:absolute; border-radius:50%">
+		<div style="width:120px; height:120px; position:relative; border-radius:50% ;top:30px; left:30px; background: radial-gradient(white 1%, rgba(252,186, 61, 1) 50%,rgba(252,186, 61, 1) 49% );">
+		</div>
+</div>
+
+<div id='sffondo' style="width:100%; min-height:1000px; z-index:100; position:absolute; height:100%; background:rgba(230,230,250,0.8);">
+
+
+
+
+
+
+</div>
+
+
+<script type="text/javascript" src="jq111.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+
+$(document).ready(function(){
+	
+	$('body').add('#sffondo').css({ "width":$(window).width()});
+
+	
+
+
+
+var myt=setInterval(function () {
+
+					var xx=Math.random() * 100;
+					xx=xx+"%";
+					var yy=Math.random() * 100;  
+					yy=yy+"%";
+					$('#pallarossa').animate({"top":xx, "left":yy} , 1000);
+					
+					var xx=Math.random() * 100;
+					xx=xx+"%";
+					var yy=Math.random() * 100;  
+					yy=yy+"%";
+					$('#pallablu').animate({"top":xx, "left":yy} , 1000);
+					
+					var xx=Math.random() * 100;
+					xx=xx+"%";
+					var yy=Math.random() * 100;  
+					yy=yy+"%";
+					$('#pallaverde').animate({"top":xx, "left":yy} , 1000);
+					
+					var xx=Math.random() * 100;
+					xx=xx+"%";
+					var yy=Math.random() * 100;  
+					yy=yy+"%";
+					$('#pallagialla').animate({"top":xx, "left":yy} , 1000);
+					
+				}	, 1000);
+
+
+});
+
+
+</script>
+</body>
+</html>
