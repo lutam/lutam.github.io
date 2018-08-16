@@ -1,22 +1,20 @@
 .grid {
-  display: block;
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 4vw; }
 
 #introduction.grid {
-  height: 8vw;
-  width: 50vw; }
+  width: 87.5%; }
 
 #ludovico.grid {
-  height: 7.5vw;
-  width: 58.75vw; }
+  width: 99.99955%; }
 
 .great_container {
   position: relative;
   display: inline-block;
-  width: 58.75vw;
-  margin-left: 20.625vw; }
+  width: 99.99955%;
+  margin-left: 0.00023%; }
 
 .letter {
   float: left;
@@ -31,8 +29,6 @@
   box-sizing: border-box;
   overflow: hidden;
   box-shadow: none;
-  width: 30px;
-  height: 30px;
   position: absolute;
   background-color: black;
   border-top: 1px solid transparent;
@@ -87,6 +83,61 @@
 .square.curved::after {
   border-radius: 50%; }
 
+.letter.one-spaced .square {
+  width: 100%; }
+
+.letter.two-spaced .square {
+  width: 50%; }
+
+.letter.three-spaced .square {
+  width: 33.333%; }
+
+.letter.two-spaced .square.wmiddle {
+  left: 50%; }
+
+.letter.three-spaced .square.wmiddle {
+  left: 33.333%; }
+
+.square.wright {
+  left: 66.666%; }
+
+.square.htop {
+  top: 0; }
+
+.square.wleft, #comma .square.wright {
+  left: 0; }
+
+.square.curved::after, .square.triangled::after {
+  position: absolute;
+  top: 0;
+  width: 200%;
+  padding-bottom: 200%; }
+
+.square.hbottom.wleft.curved::after {
+  left: 0;
+  top: -100%;
+  position: absolute; }
+
+.square.hbottom.wright.curved::after, .square.hbottom.wmiddle.curved::after, .square.hmiddlebottom.wmiddle.curved::after {
+  left: -100%;
+  top: -100%;
+  position: absolute; }
+
+.square.htop.wright.curved::after, .square.hmiddletop.wmiddle.curved::after, .square.hmiddletop.wright.curved:not(.reverse)::after, .square.hmiddletop.wleft.reverse.curved::after {
+  top: 0;
+  left: -100%;
+  position: absolute; }
+
+.square.wleft.triangled::after {
+  left: 41.4213562%;
+  top: -100%;
+  position: absolute; }
+
+.square.wright.triangled::after {
+  top: -100%;
+  left: -141.4213562%;
+  position: absolute; }
+
 body.gameplay {
   background-color: black;
   position: fixed;
@@ -122,129 +173,62 @@ body.gameplay {
     vertical-align: middle; }
 
 #introduction .letter {
-  margin-right: 1vw; }
-
-#introduction .square {
-  width: 2vw;
-  height: 2vw; }
+  margin-right: 1.75%;
+  padding-top: 14%; }
 
 #introduction .letter.one-spaced {
-  width: 2vw; }
+  width: 3.5%; }
 
 #introduction .letter.two-spaced {
-  width: 4vw; }
+  width: 7%; }
 
 #introduction .letter.three-spaced {
-  width: 6vw; }
+  width: 10.5%; }
 
-#introduction .square.htop {
+#introduction .letter .square {
+  height: 25%;
   top: 0; }
 
+#introduction .letter .square.hmiddletop {
+  height: 26%; }
+
 #introduction .square.hmiddletop {
-  top: 2vw; }
+  top: 25%; }
 
 #introduction .square.hmiddlebottom {
-  top: 4vw; }
+  top: 50%; }
 
 #introduction .square.hbottom {
-  top: 6vw; }
-
-#introduction .square.wleft, #introduction #comma .square.wright {
-  left: 0; }
-
-#introduction .square.wmiddle {
-  left: 2vw; }
-
-#introduction .square.wright {
-  left: 4vw; }
-
-#introduction .square.curved::after, #introduction .square.triangled::after {
-  width: 4vw;
-  height: 4vw; }
-
-#introduction .square.hbottom.wleft.curved::after {
-  left: 0;
-  top: -2vw; }
-
-#introduction .square.hbottom.wright.curved::after, #introduction .square.hbottom.wmiddle.curved::after, #introduction .square.hmiddlebottom.wmiddle.curved::after {
-  left: -2vw;
-  top: -2vw; }
-
-#introduction .square.htop.wright.curved::after, #introduction .square.hmiddletop.wmiddle.curved::after, #introduction .square.hmiddletop.wright.curved:not(.reverse)::after, #introduction .square.hmiddletop.wleft.reverse.curved::after {
-  top: 0;
-  left: -2vw; }
-
-#introduction .square.wleft.triangled::after {
-  left: 0.82843vw;
-  top: -2vw; }
-
-#introduction .square.wright.triangled::after {
-  top: -2vw;
-  left: -2.82843vw; }
+  top: 75%; }
 
 #ludovico .letter {
-  margin-right: 1.25vw; }
-
-#ludovico .square {
-  width: 2.5vw;
-  height: 2.5vw; }
+  margin-right: 2.12765%;
+  padding-top: 12.7659%; }
 
 #ludovico .letter.one-spaced {
-  width: 2.5vw; }
+  width: 4.2553%; }
 
 #ludovico .letter.two-spaced {
-  width: 5vw; }
+  width: 8.5106%; }
 
 #ludovico .letter.three-spaced {
-  width: 7.5vw; }
+  width: 12.7659%; }
 
-#ludovico .square.htop {
+#ludovico .letter .square {
+  height: 33.333%;
   top: 0; }
 
 #ludovico .square.hmiddle {
-  top: 2.5vw; }
+  top: 33.333%; }
 
 #ludovico .square.hbottom {
-  top: 5vw; }
-
-#ludovico .square.wleft {
-  left: 0; }
-
-#ludovico .square.wmiddle {
-  left: 2.5vw; }
-
-#ludovico .square.wright {
-  left: 5vw; }
-
-#ludovico .square.curved::after, #ludovico .square.triangled::after {
-  width: 5vw;
-  height: 5vw; }
-
-#ludovico .square.hbottom.wleft.curved::after {
-  left: 0;
-  top: -2.5vw; }
-
-#ludovico .square.hbottom.wright.curved::after {
-  left: -2.5vw;
-  top: -2.5vw; }
-
-#ludovico .square.htop.wright.curved::after {
-  top: 0;
-  left: -2.5vw; }
-
-#ludovico .square.wleft.triangled::after {
-  left: 1.03553vw;
-  top: -2.5vw; }
-
-#ludovico .square.wright.triangled::after {
-  top: -2.5vw;
-  left: -3.53553vw; }
+  top: 66.666%; }
 
 #bases {
-  width: 80vw;
+  width: 140%;
   display: inline-block;
-  margin-left: 10vw;
-  height: 5.25vw;
+  margin-left: -20%;
+  height: 9.1875%;
   margin-top: 10vh;
   margin-bottom: 10vh;
   display: none; }
@@ -252,36 +236,36 @@ body.gameplay {
 .base {
   float: left;
   position: relative;
-  width: 14vw;
-  height: 5.25vw;
-  margin-right: 8vw; }
+  width: 24.5%;
+  height: 9.1875%;
+  margin-right: 14%; }
 
 .base .square {
   border: 0 !important;
   background-color: green;
-  width: 3.5vw;
-  height: 1.75vw; }
+  width: 6.125%;
+  height: 3.0625%; }
 
 .base .square.wleft {
   left: 0; }
 
 .base .square.wmiddleleft {
-  left: 3.5vw; }
+  left: 6.125%; }
 
 .base .square.wmiddleright {
-  left: 7vw; }
+  left: 12.25%; }
 
 .base .square.wright {
-  left: 10.5vw; }
+  left: 18.375%; }
 
 .base .square.htop {
   top: 0; }
 
 .base .square.hmiddle {
-  top: 1.75vw; }
+  top: 3.0625%; }
 
 .base .square.hbottom {
-  top: 3.5vw; }
+  top: 6.125%; }
 
 .base .square.triangled {
   background-color: transparent; }
@@ -292,31 +276,31 @@ body.gameplay {
   content: "";
   transform: rotate(-45deg);
   background-color: green;
-  width: 7vw;
-  height: 7vw; }
+  width: 12.25%;
+  height: 12.25%; }
 
 .base .square.wmiddleleft.hmiddle::after {
-  top: -4.94975vw;
-  left: -3.5vw; }
+  top: -8.66206%;
+  left: -6.125%; }
 
 .base .square.wmiddleright.hmiddle::after {
-  top: -3.5vw;
-  left: 1.44975vw; }
+  top: -6.125%;
+  left: 2.53706%; }
 
 .base .square.wright.htop::after {
-  left: -4.94975vw; }
+  left: -8.66206%; }
 
 .base .square.wleft.htop::after {
-  left: 1.44975vw; }
+  left: 2.53706%; }
 
 #starship {
   font-size: 3vw;
   color: white;
-  width: 4vw;
-  height: 4vw;
+  width: 7%;
+  height: 7%;
   position: absolute;
   display: block;
-  left: 48vw;
+  left: 46.5%;
   display: none; }
 
 #starship i {

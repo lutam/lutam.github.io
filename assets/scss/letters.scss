@@ -1,5 +1,5 @@
-$introduction_width: 2vw;
-$ludovico_width: 2.5vw;
+$introduction_width: 3.5%;
+$ludovico_width: 4.2553%;
 $border_color:transparent;
 $letter_color: black;
 $letter_color_active: white;
@@ -8,16 +8,16 @@ $bases_width:40;
 $bases_margin:4;
 $base_width : ($introduction_width*$bases_width - $introduction_width*3*$bases_margin)/16;
 
-.grid{  display: block; margin-left: auto; margin-right: auto; margin-bottom: 4vw; }
-#introduction.grid{ height: $introduction_width*4; width: $introduction_width*25;}
-#ludovico.grid{ height: $ludovico_width*3; width: $ludovico_width*23.5; }
+.grid{  display: inline-block; margin-left: auto; margin-right: auto; margin-bottom: 4vw; }
+#introduction.grid{  width: $introduction_width*25;}
+#ludovico.grid{ width: $ludovico_width*23.5; }
 
 .great_container{ position:relative; display:inline-block; width: $ludovico_width*23.5; margin-left: (100-$ludovico_width*23.5)/2; }
 
 
-.letter{  float:left; position:relative; height: 100%;  }
+.letter{  float:left; position:relative;  height: 100%; }
 .letter:last-child{ margin-right: 0 !important; }
-.square{ transition: all 0.2s linear ; box-sizing:border-box; overflow:hidden; box-shadow: $letter_shadow; width: 30px; height: 30px; position:absolute; background-color: $letter_color; border-top:1px solid $border_color; border-right: 1px solid $border_color; }
+.square{ transition: all 0.2s linear ; box-sizing:border-box; overflow:hidden; box-shadow: $letter_shadow;  position:absolute; background-color: $letter_color; border-top:1px solid $border_color; border-right: 1px solid $border_color; }
 .square{
 	&.wleft{ border-left: 1px solid $border_color; }
 	&.curved, &.triangled{ border:0; border-top:1px solid $border_color; background-color: transparent !important; box-shadow: none; }
@@ -36,6 +36,22 @@ $base_width : ($introduction_width*$bases_width - $introduction_width*3*$bases_m
 	
 
 	}
+
+	.letter.one-spaced .square{ width: 100%;  }
+	.letter.two-spaced .square{ width: 50%;  }
+	.letter.three-spaced .square{ width: 33.333%; }
+	.letter.two-spaced .square.wmiddle{ left: 50%; }
+	.letter.three-spaced .square.wmiddle{ left: 33.333%; }
+	.square.wright{ left: 66.666%; }
+	.square.htop{ top: 0; }
+	.square.wleft, #comma .square.wright{left: 0;}
+
+	.square.curved::after, .square.triangled::after{  position:absolute; top:0; width: 200%; padding-bottom: 200%; }
+	.square.hbottom.wleft.curved::after{ left: 0;  top: -100%; position: absolute;   }
+	.square.hbottom.wright.curved::after , .square.hbottom.wmiddle.curved::after, .square.hmiddlebottom.wmiddle.curved::after{ left: -100%; top: -100%; position: absolute; }
+	.square.htop.wright.curved::after, .square.hmiddletop.wmiddle.curved::after, .square.hmiddletop.wright.curved:not(.reverse)::after, .square.hmiddletop.wleft.reverse.curved::after{ top:0; left: -100%; position: absolute; }
+		.square.wleft.triangled::after{ left: 41.4213562%; top: -100%; position: absolute; }
+		.square.wright.triangled::after{ top: -100%; left: -141.4213562%; position: absolute; }
 
 
 body.gameplay {
@@ -56,48 +72,39 @@ body.gameplay {
 
 }
 #introduction{ 
-	.letter{ margin-right: $introduction_width/2; }
-	.square{ width: $introduction_width; height:$introduction_width; }
+	.letter{ margin-right: $introduction_width/2; padding-top: $introduction_width*4;}
 	.letter.one-spaced{ width: $introduction_width; }
 	.letter.two-spaced{ width: $introduction_width*2; }
 	.letter.three-spaced{ width: $introduction_width*3; }
-	.square.htop{ top: 0; }
-	.square.hmiddletop{ top: $introduction_width; }
-	.square.hmiddlebottom{ top: $introduction_width*2; }
-	.square.hbottom{ top:  $introduction_width*3; }
-	.square.wleft, #comma .square.wright{left: 0;}
-	.square.wmiddle{ left: $introduction_width; }
-	.square.wright{ left: $introduction_width*2 }
-	.square.curved::after, .square.triangled::after{  width: $introduction_width*2; height: $introduction_width*2; }
-	.square.hbottom.wleft.curved::after{ left: 0; top: -1*$introduction_width;  }
-	.square.hbottom.wright.curved::after, .square.hbottom.wmiddle.curved::after, .square.hmiddlebottom.wmiddle.curved::after{ left: -1*$introduction_width; top: -1*$introduction_width; }
-	.square.htop.wright.curved::after, .square.hmiddletop.wmiddle.curved::after, .square.hmiddletop.wright.curved:not(.reverse)::after, .square.hmiddletop.wleft.reverse.curved::after{ top:0; left: -1*$introduction_width; }
-	.square.wleft.triangled::after{ left: $introduction_width*0.414213562; top: -1*$introduction_width; }
-	.square.wright.triangled::after{ top: -1*$introduction_width; left: -1*$introduction_width*1.414213562; }
+	
+	.letter .square{ height: 25%; top:0;}
+	.letter .square.hmiddletop{ height: 26%; }
 
+	.square.hmiddletop{ top: 25%; }
+	.square.hmiddlebottom{ top: 50%; }
+	.square.hbottom{ top:  75%; }
 
 }
 
 
+		
+
+
+
+
 
 #ludovico {
-		.letter{ margin-right: $ludovico_width/2; }
-		.square{ width: $ludovico_width; height:$ludovico_width; }
+		.letter{ margin-right: $ludovico_width/2; padding-top: $ludovico_width*3;  }
 		.letter.one-spaced{ width: $ludovico_width; }
 		.letter.two-spaced{ width: $ludovico_width*2; }
 		.letter.three-spaced{ width: $ludovico_width*3; }
-		.square.htop{ top: 0; }
-		.square.hmiddle{ top: $ludovico_width; }
-		.square.hbottom{ top: $ludovico_width*2; }
-		.square.wleft{left: 0;}
-		.square.wmiddle{ left: $ludovico_width; }
-		.square.wright{ left: $ludovico_width*2 }
-		.square.curved::after, .square.triangled::after{  width: $ludovico_width*2; height: $ludovico_width*2; }
-		.square.hbottom.wleft.curved::after{ left: 0; top: -1*$ludovico_width;  }
-		.square.hbottom.wright.curved::after { left: -1*$ludovico_width; top: -1*$ludovico_width; }
-		.square.htop.wright.curved::after{ top:0; left: -1*$ludovico_width; }
-		.square.wleft.triangled::after{ left: $ludovico_width*0.414213562; top: -1*$ludovico_width; }
-		.square.wright.triangled::after{ top: -1*$ludovico_width; left: -1*$ludovico_width*1.414213562; }
+		
+		.letter .square{ height: 33.333%; top:0;}
+
+	.square.hmiddle{ top: 33.333%; }
+	.square.hbottom{ top:  66.666%; }
+		
+		
 }
 
 
