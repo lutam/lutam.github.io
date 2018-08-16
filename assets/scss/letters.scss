@@ -6,11 +6,16 @@ $letter_color_active: white;
 $letter_shadow: none;
 $bases_width:40;
 $bases_margin:4;
-$base_width : ($introduction_width*$bases_width - $introduction_width*3*$bases_margin)/16;
+/*$base_width : 5.26%; ($introduction_width*$bases_width - $introduction_width*3*$bases_margin)/16;*/
+$base_width : 4%;
 
-.grid{  display: inline-block; margin-left: auto; margin-right: auto; margin-bottom: 4vw; }
+.grid{  position:relative; display: inline-block; margin-left: auto; margin-right: auto; margin-bottom: 4vw; }
 #introduction.grid{  width: $introduction_width*25;}
 #ludovico.grid{ width: $ludovico_width*23.5; }
+
+
+#bases{ width: $base_width*25; margin-top:4vh; margin-bottom: 4vh; display: none;}
+
 
 .great_container{ position:relative; display:inline-block; width: $ludovico_width*23.5; margin-left: (100-$ludovico_width*23.5)/2; }
 
@@ -54,9 +59,10 @@ $base_width : ($introduction_width*$bases_width - $introduction_width*3*$bases_m
 		.square.wright.triangled::after{ top: -100%; left: -141.4213562%; position: absolute; }
 
 
+#infogame, #info_window{ display:none; }
 body.gameplay {
 	background-color: black; position: fixed; overflow: hidden;
-	#bases, #starship{ display: block; }
+	#bases, #starship{ display: inline-block; }
 	#play{ display: none; }
 	.hostile_laser, .my_laser{ display: block; }
 	.square.hmiddletop.wright.curved.reverse{ border-left-color: black !important; }
@@ -67,7 +73,60 @@ body.gameplay {
 
 	#logo h1{ display: none; }
 	#logo{ cursor:pointer; border-color: white; left:90%;  }
- 	#logo::after{ content: "X"; color: WHITE; font-weight: 500; font-family: 'Quicksand', sans-serif; display: table-cell; font-size: 36px; text-align: center; vertical-align: middle; }
+ 	#logo::after{ content: "X"; color: WHITE; font-weight: 500; font-family: 'Quicksand', sans-serif; display: block; padding-top:1%; text-align: center; vertical-align: middle; }
+ 	#infogame{ display: inline-block;
+position: relative;
+right: 0;
+background: white;
+width: 30px;
+height: 30px;
+color: black;
+border: 2px solid white;
+cursor: pointer;
+float: left;
+text-align: center;
+border-radius: 50%;
+padding-top: 1px;
+box-sizing: border-box;
+font-size: 17px;
+font-weight: bold;}
+
+#infogame:hover{
+	color:white; background:black;
+}
+
+
+#info_window{
+	position: fixed;
+width: 40%;
+z-index: 999999;
+left: 30%;
+background: white;
+color: black;
+padding: 40px;
+box-sizing: border-box;
+box-shadow: 2px 3px 2px #333;
+font-size: 33px;
+}
+
+#info_window i.fa-times{
+	position: absolute;
+right: 10px;
+top: 10px;
+cursor: pointer;
+font-size: 40px;
+}
+
+#info_window::after{
+content:"";
+position:fixed;
+z-index:-1;
+background:rgba(0,0,0,0.4);
+width:100%;
+left:0;
+top:0;
+height:100%;
+}
 	
 
 }
@@ -109,37 +168,37 @@ body.gameplay {
 
 
 
-#bases{ width: $introduction_width*$bases_width; display: inline-block; margin-left: (100-$introduction_width*$bases_width)/2; height: $base_width*1.5; margin-top:10vh; margin-bottom: 10vh; display: none;}
 
 
-.base{  float: left; position:relative; width: ($introduction_width*$bases_width - $introduction_width*3*$bases_margin)/4; height: $base_width*1.5; margin-right: $introduction_width*$bases_margin; }
+.base{  float: left; position:relative; width: 4*$base_width; padding-top: 16%; margin-right: 3*$base_width; }
 .base{
 
-	.square{  border:0 !important; background-color: green;  width: $base_width; height: $base_width/2; }
+	.square{  border:0 !important; background-color: green;  width: 25%; height:25%; }
 	.square{
 		&.wleft{ left: 0; }
-		&.wmiddleleft{ left: $base_width; }
-		&.wmiddleright{ left: $base_width*2; }
-		&.wright{ left: $base_width*3; }
+		&.wmiddleleft{ left: 25%; }
+		&.wmiddleright{ left: 50%; }
+		&.wright{ left: 75%; }
 		&.htop{ top:0; }
-		&.hmiddle{ top: $base_width/2; }
-		&.hbottom{ top: $base_width; }
+		&.hmiddle{ top: 25%; }
+		&.hbottom{ top: 50%; }
 
 		&.triangled{ background-color: transparent; }
-		&.triangled::after, &.triangled::after{ display: block; position: relative; content: ""; transform: rotate(-45deg); background-color: green; width: 2*$base_width; height: 2*$base_width;  }
-		&.wmiddleleft.hmiddle::after{ top: -1*1.414213562*$base_width;  left: -1* $base_width; }
-		&.wmiddleright.hmiddle::after{ top: -1*$base_width;  left: 0.414213562*$base_width; }
-		&.wright.htop::after{ left: -1*1.414213562*$base_width; }
-		&.wleft.htop::after{ left: 0.414213562*$base_width; }
+		&.triangled::after, &.triangled::after{ display: block; position: relative; content: ""; top:0; transform: rotate(-45deg); background-color: green; width: 200%; height: 200%;  }
+		&.wmiddleleft.hmiddle::after{ top: -100*1.414213562%;  left: -100%; }
+		&.wmiddleright.hmiddle::after{ top: -100%;  left: 0.414213562*100%; }
+		&.wright.htop::after{ left: -100*1.414213562%; }
+		&.wleft.htop::after{ left: 0.414213562*100%; }
 
 	}
 }
 
-		#starship{   font-size: 3vw; color: white; width: 2*$introduction_width; height: 2*$introduction_width; position:absolute; display: block; left: (100 - $introduction_width*2)/2; display: none; }
-		#starship i{ transform: rotate(-90deg); }
+		#starship{   font-size: 3vw; color: white; width: 2*$introduction_width; height: 2*$introduction_width; position:relative; display: block; left: (100 - $introduction_width*2)/2; display: none; }
+		#starship i{ transform: rotate(-90deg); position:relative; right:1.75vw; }
 
 
-#play{     width: 219px;
+#play{     max-width: 220px;
+width:60%;
     background-color: #3498db;
 
 
@@ -156,9 +215,27 @@ body.gameplay {
     border-radius: 3px;
     font-size: 16px;
     font-weight: 700;
-    padding: 17px;
-} 
+padding: 0;
+border:1px solid #3498db;
+height: 14vw;
+height: 55px; margin-top:40px; transition:0.4s all ease-in-out; }
+#play:hover{ color:#3498db; background-color:transparent; } 
 
 		.base:last-child{ margin-right: 0; }
-		.hostile_laser, .my_laser{ display:none; z-index:9; width: 6px; height: 20px; background-color: blue; position: fixed; }
-		.my_laser{  background-color: yellow; }
+		.hostile_laser, .my_laser{ display:none; z-index:9; width: 8px; height: 8px; background-color: white; position: fixed; }
+		.my_laser{  background-color: white; 
+		margin-top:-20px;}
+
+
+		#commands{ width:100%; display:none; position:absolute; bottom:0; left:0; }
+		#commands .fas{ font-size:40px; color:white; float:left; margin-right:40px;}
+		#red_button{ float:right; width:40px; height:40px; background:red; border-radius:50%; }
+
+
+@media only screen and (max-width:992px){
+	
+	body.gameplay #commands{ display:inline-block; }
+	.hostile_laser, .my_laser{ width:5px; height:5px; }
+	#starship i{ right:18px;}
+	#starship{ font-size:35px; }
+}

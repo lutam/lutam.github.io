@@ -11,20 +11,20 @@
 <body>
 	<header id="header">
 		<div class="container" id="model">
+			<span id="infogame" onclick="$('#info_window').toggle()"> ? </span>
 			<div id="logo">
 				<h1><a href='./'>LT</a></h1>
 			</div>
 
 			<nav>
 				<a href="./#skills"><span>SKILLS</span></a>
-				<a href="works"><span>WORK</span></a>
-				<a href="CONTACT"><span>CONTACT</span></a>
+				<a href="works"><span>WORKS</span></a>
+				<a href="https://github.com/lutam"><span><i class="fab fa-github"></i></span></a>
 			</nav>
 		</div>
 	</header><style type="text/css">
 	
-	#works{ padding-top: 95px; }
-
+	#works{ padding-bottom: 30px; }
 	.work{     position:relative; overflow: hidden;}
 	#lvstore, #lvmagazine, #sdf{ top: 0;  }
 	#work_container .work{ position:absolute;  }
@@ -55,6 +55,10 @@ font-size: 18px;
 font-family: Quicksand;
 
 font-weight: 100; }
+
+
+#works h2{ margin-bottom: 30px; }
+#works h3{ margin-top: 80px; font-family: 'montserrat'; font-weight: bold; text-shadow: 4px 3px 2px #bdc3c7; margin-bottom: 30px; }
 
 
 	 .work:hover h4{ margin-top: 0; }
@@ -371,10 +375,7 @@ list-style-type: none;
 	<div class="col-xs-12 nopad">
 		<h2>WORKS</h2>
 	</div>
-	<div class="col-xs-12 nopad">
-		<h3>WORK</h3>
-
-	</div>
+	
 	<div class="col-xs-12 nopad" id="work_container">
 		<div class="work col-xs-12 col-sm-6 nopad"  id="lvstore">
 			<div class="patina" style="background-image: url('assets/img/LV-STORE.png');">

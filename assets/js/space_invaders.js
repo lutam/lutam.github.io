@@ -11,6 +11,8 @@ var M_timer;
 			    $('#header nav').toggle();
 				$('body').toggleClass('gameplay');
 
+
+
 		})
 
 
@@ -35,19 +37,33 @@ var M_timer;
 		function move(){
 			var rt=($(window).width() - ($('#ludovico').offset().left + $('#ludovico').outerWidth()));
 			var lt= $('#ludovico').offset().left;
-			if(rt < 20){ isrightdir = false; }
-			else if(lt < 20){ isrightdir = true;  }
+			if($(window).width()>768){ var limit = 20; } else{ var limit = -50; }
+			if(rt < limit){ isrightdir = false; }
+			else if(lt < limit){ isrightdir = true;  }
+
 
 			if(isrightdir){
-				$('#ludovico').add('#introduction').animate({'margin-left':'+=10px'}, 300, "linear");
+				$('#ludovico').add('#introduction').animate({'left':'+=10px'}, 300, "linear");
 			}else{ 	
-				$('#ludovico').add('#introduction').animate({'margin-left':'-=10px'}, 300, "linear");
+				$('#ludovico').add('#introduction').animate({'left':'-=10px'}, 300, "linear");
  			}
 
  			
 		}
 
 		function shout(){
+
+			var letters_left = $('#ludovico .square').length+ $('#introduction .square').length;
+			if(letters_left==0){ $('#info_window p').html("VITTORIA! <br> Tutte le lettere sono state eliminate.<br> Chiudi il gioco per continuare a navigare sul sito.");
+								$('#info_window').fadeIn(); clearTimeout(M_timer);
+			    clearTimeout(S_timer);
+							}
+
+			var bases_left = $('#bases .square').length;
+			if(bases_left == 0 ){ $('#info_window p').html("SCONFITTA! <br> Tutte le tue basi sono state eliminate.<br> Chiudi il gioco per continuare a navigare sul sito.");
+					$('#info_window').fadeIn(); clearTimeout(M_timer);
+			    clearTimeout(S_timer);}
+
 			if($('.hostile_laser').length==0){
 				shouting_letter= Math.floor(Math.random() * 20); 
 				$('#ludovico .square').add('#introduction .square').each(function( index ) {
@@ -73,7 +89,7 @@ var M_timer;
 
 
 			if($('.hostile_laser').offset().top > $('#starship').offset().top){ $('.hostile_laser').remove(); }
- 			$('.my_laser').animate({"top": "-=50px"}, 100, "linear");
+ 			$('.my_laser').animate({"top": "-=10px"}, 50, "linear");
 
  			$('.square').each(function(){
  				 var collisions = $(this).collision(  ".my_laser",{ relative: "collider", obstacleData: "odata", colliderData: "cdata", directionData: "ddata", as: "<div/>" });
@@ -89,6 +105,7 @@ var M_timer;
  			})
 		}
 
+		var letitshoot = true;
 		function moveStarShip(direction){
 			if(direction==37){
 				$('#starship').animate({'left' : '-=30px'}, 10, "linear");
@@ -96,7 +113,12 @@ var M_timer;
 			else if(direction==39){
 				$('#starship').animate({'left' : '+=30px'}, 10, "linear");
 			}else if(direction==32){
-				$('#starship').append("<div class='my_laser' style='left:"+$('#starship').offset().left+"px;'></div>");                                                          			}
+				if(letitshoot){
+					$('#starship').append("<div class='my_laser' style='left:"+$('#starship').offset().left+"px;'></div>");
+					letitshoot = false;
+					setTimeout(function(){ letitshoot = true; }, 1);
+				}                                                          			
+			}
 		}
 
 

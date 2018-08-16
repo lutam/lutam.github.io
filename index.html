@@ -11,17 +11,28 @@
 <body>
 	<header id="header">
 		<div class="container" id="model">
+			<span id="infogame" onclick="$('#info_window').toggle()"> ? </span>
 			<div id="logo">
 				<h1><a href='./'>LT</a></h1>
 			</div>
 
 			<nav>
 				<a href="./#skills"><span>SKILLS</span></a>
-				<a href="works"><span>WORK</span></a>
-				<a href="CONTACT"><span>CONTACT</span></a>
+				<a href="works"><span>WORKS</span></a>
+				<a href="https://github.com/lutam"><span><i class="fab fa-github"></i></span></a>
 			</nav>
 		</div>
-	</header><section id="space_invaders" class="container">
+	</header><div id="info_window">
+		<i class="fas fa-times" onclick="$('#info_window').toggle();"></i>
+		<p>
+	Distruggi le lettere prima che distruggano le basi! <br>
+	Premi 		<i class="fas fa-caret-square-left"></i> e 		<i class="fas fa-caret-square-right"></i> per muovere l'astronave e la barra spaziatrice per sparare.<br>
+	Premi la X per uscire.
+	</p>
+
+</div>
+
+<section id="space_invaders" class="container">
 	<div id="space_invaders_vertical_align">
 	<div class="grid" id="introduction">
 		<div class="letter three-spaced" id="h">
@@ -168,7 +179,6 @@
 
 	<button id="play">PLAY</button>
 	
-</script>
 
 	<div id="bases" class="grid">
 		<div class="base">
@@ -223,6 +233,17 @@
 
 	<div id="starship">
 		<i class="fas fa-space-shuttle"></i>
+	</div>
+
+	<div id="commands" class="grid">
+		<div class="col-xs-6">
+		<i class="fas fa-caret-square-left" onclick="moveStarShip(37)"></i>
+		<i class="fas fa-caret-square-right" onclick="moveStarShip(39)"></i>
+	</div>
+<div class="col-xs-6">
+		<div id="red_button" onclick="moveStarShip(32)">
+		</div>
+	</div>
 	</div>
 
 	</div>

@@ -1,4 +1,6 @@
+/*$base_width : 5.26%; ($introduction_width*$bases_width - $introduction_width*3*$bases_margin)/16;*/
 .grid {
+  position: relative;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
@@ -9,6 +11,12 @@
 
 #ludovico.grid {
   width: 99.99955%; }
+
+#bases {
+  width: 100%;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  display: none; }
 
 .great_container {
   position: relative;
@@ -138,12 +146,15 @@
   left: -141.4213562%;
   position: absolute; }
 
+#infogame, #info_window {
+  display: none; }
+
 body.gameplay {
   background-color: black;
   position: fixed;
   overflow: hidden; }
   body.gameplay #bases, body.gameplay #starship {
-    display: block; }
+    display: inline-block; }
   body.gameplay #play {
     display: none; }
   body.gameplay .hostile_laser, body.gameplay .my_laser {
@@ -167,10 +178,56 @@ body.gameplay {
     color: WHITE;
     font-weight: 500;
     font-family: 'Quicksand', sans-serif;
-    display: table-cell;
-    font-size: 36px;
+    display: block;
+    padding-top: 1%;
     text-align: center;
     vertical-align: middle; }
+  body.gameplay #infogame {
+    display: inline-block;
+    position: relative;
+    right: 0;
+    background: white;
+    width: 30px;
+    height: 30px;
+    color: black;
+    border: 2px solid white;
+    cursor: pointer;
+    float: left;
+    text-align: center;
+    border-radius: 50%;
+    padding-top: 1px;
+    box-sizing: border-box;
+    font-size: 17px;
+    font-weight: bold; }
+  body.gameplay #infogame:hover {
+    color: white;
+    background: black; }
+  body.gameplay #info_window {
+    position: fixed;
+    width: 40%;
+    z-index: 999999;
+    left: 30%;
+    background: white;
+    color: black;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 2px 3px 2px #333;
+    font-size: 33px; }
+  body.gameplay #info_window i.fa-times {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 40px; }
+  body.gameplay #info_window::after {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%; }
 
 #introduction .letter {
   margin-right: 1.75%;
@@ -224,48 +281,39 @@ body.gameplay {
 #ludovico .square.hbottom {
   top: 66.666%; }
 
-#bases {
-  width: 140%;
-  display: inline-block;
-  margin-left: -20%;
-  height: 9.1875%;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
-  display: none; }
-
 .base {
   float: left;
   position: relative;
-  width: 24.5%;
-  height: 9.1875%;
-  margin-right: 14%; }
+  width: 16%;
+  padding-top: 16%;
+  margin-right: 12%; }
 
 .base .square {
   border: 0 !important;
   background-color: green;
-  width: 6.125%;
-  height: 3.0625%; }
+  width: 25%;
+  height: 25%; }
 
 .base .square.wleft {
   left: 0; }
 
 .base .square.wmiddleleft {
-  left: 6.125%; }
+  left: 25%; }
 
 .base .square.wmiddleright {
-  left: 12.25%; }
+  left: 50%; }
 
 .base .square.wright {
-  left: 18.375%; }
+  left: 75%; }
 
 .base .square.htop {
   top: 0; }
 
 .base .square.hmiddle {
-  top: 3.0625%; }
+  top: 25%; }
 
 .base .square.hbottom {
-  top: 6.125%; }
+  top: 50%; }
 
 .base .square.triangled {
   background-color: transparent; }
@@ -274,40 +322,44 @@ body.gameplay {
   display: block;
   position: relative;
   content: "";
+  top: 0;
   transform: rotate(-45deg);
   background-color: green;
-  width: 12.25%;
-  height: 12.25%; }
+  width: 200%;
+  height: 200%; }
 
 .base .square.wmiddleleft.hmiddle::after {
-  top: -8.66206%;
-  left: -6.125%; }
+  top: -141.42136%;
+  left: -100%; }
 
 .base .square.wmiddleright.hmiddle::after {
-  top: -6.125%;
-  left: 2.53706%; }
+  top: -100%;
+  left: 41.42136%; }
 
 .base .square.wright.htop::after {
-  left: -8.66206%; }
+  left: -141.42136%; }
 
 .base .square.wleft.htop::after {
-  left: 2.53706%; }
+  left: 41.42136%; }
 
 #starship {
   font-size: 3vw;
   color: white;
   width: 7%;
   height: 7%;
-  position: absolute;
+  position: relative;
   display: block;
   left: 46.5%;
   display: none; }
 
 #starship i {
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+  position: relative;
+  right: 1.75vw; }
 
 #play {
-  width: 219px;
+  max-width: 220px;
+  width: 60%;
   background-color: #3498db;
   font-family: 'Quicksand', sans-serif;
   color: #e9edef;
@@ -321,7 +373,16 @@ body.gameplay {
   border-radius: 3px;
   font-size: 16px;
   font-weight: 700;
-  padding: 17px; }
+  padding: 0;
+  border: 1px solid #3498db;
+  height: 14vw;
+  height: 55px;
+  margin-top: 40px;
+  transition: 0.4s all ease-in-out; }
+
+#play:hover {
+  color: #3498db;
+  background-color: transparent; }
 
 .base:last-child {
   margin-right: 0; }
@@ -329,10 +390,42 @@ body.gameplay {
 .hostile_laser, .my_laser {
   display: none;
   z-index: 9;
-  width: 6px;
-  height: 20px;
-  background-color: blue;
+  width: 8px;
+  height: 8px;
+  background-color: white;
   position: fixed; }
 
 .my_laser {
-  background-color: yellow; }
+  background-color: white;
+  margin-top: -20px; }
+
+#commands {
+  width: 100%;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
+#commands .fas {
+  font-size: 40px;
+  color: white;
+  float: left;
+  margin-right: 40px; }
+
+#red_button {
+  float: right;
+  width: 40px;
+  height: 40px;
+  background: red;
+  border-radius: 50%; }
+
+@media only screen and (max-width: 992px) {
+  body.gameplay #commands {
+    display: inline-block; }
+  .hostile_laser, .my_laser {
+    width: 5px;
+    height: 5px; }
+  #starship i {
+    right: 18px; }
+  #starship {
+    font-size: 35px; } }
