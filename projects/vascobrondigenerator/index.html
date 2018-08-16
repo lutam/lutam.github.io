@@ -226,7 +226,10 @@ facebook :<a href="https://www.facebook.com/pages/Generatore-automatico-di-versi
 </main>
 <footer >
 <ul>
-    
+    <?php /*
+	<li>
+		<button id="serio_f" class='extra'>seriamente</button> 
+	</li>*/ ?>
 	<li>
 		<button id="credits_f" style="margin-left:10px; margin-right:10px;" class='extra'>crediti</button>
 	</li> 
@@ -238,8 +241,12 @@ facebook :<a href="https://www.facebook.com/pages/Generatore-automatico-di-versi
 </footer>
 
 
-<script type="text/javascript" src="jq111.js"></script>
-<script type="text/javascript">
+
+<script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+			  <script type="text/javascript">
 
 function cap(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -324,4 +331,7 @@ $(document).ready(function () {
 </body>
 
 </html>
+<?php
 
+
+ ?>

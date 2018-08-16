@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="assets/img/favicon-32.png" rel="shortcut icon" type="image/png">
 	<title>Ludovico Tamigio</title>
-	<script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script><script type='text/javascript' src='assets/js/jquery-collision-1.0.1.js'></script><script type='text/javascript' src='assets/js/space_invaders.js'></script><script type='text/javascript' src='assets/js/home.js'></script>	<link href='assets/css/home.css' rel='stylesheet' type='text/css' /><link href='assets/css/letters.css' rel='stylesheet' type='text/css' /><link href='assets/css/global.css' rel='stylesheet' type='text/css' />	<link href='https://fonts.googleapis.com/css?family=Montserrat:700,800,900|Quicksand:500,700' rel='stylesheet'><link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css' integrity='sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ' crossorigin='anonymous'>
+		<meta charset="utf-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script type='text/javascript' src='assets/js/jquery-collision-1.0.1.js'></script><script type='text/javascript' src='assets/js/space_invaders.js'></script><script type='text/javascript' src='assets/js/home.js'></script>	<link href='assets/css/home.css' rel='stylesheet' type='text/css' /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link href='assets/css/letters.css' rel='stylesheet' type='text/css' /><link href='assets/css/global.css' rel='stylesheet' type='text/css' />	<link href='https://fonts.googleapis.com/css?family=Montserrat:700,800,900|Quicksand:500,700' rel='stylesheet'><link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css' integrity='sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ' crossorigin='anonymous'>
 </head>
 <body>
 	<header id="header">
-		<div class="great_container" id="model">
+		<div class="container" id="model">
 			<div id="logo">
-				<h1>LT</h1>
+				<h1><a href='./'>LT</a></h1>
 			</div>
 
 			<nav>
-				<a href="SKILLS">SKILLS</a>
-				<a href="WORK">WORK</a>
-				<a href="CONTACT">CONTACT</a>
+				<a href="./#skills"><span>SKILLS</span></a>
+				<a href="works"><span>WORK</span></a>
+				<a href="CONTACT"><span>CONTACT</span></a>
 			</nav>
-			<div id="game_data">
-			</div>
 		</div>
-	</header><section id="space_invaders">
-
+	</header><section id="space_invaders" class="container">
+	<div id="space_invaders_vertical_align">
 	<div class="grid" id="introduction">
 		<div class="letter three-spaced" id="h">
 			<div class="square htop wleft"></div>
@@ -222,36 +224,38 @@
 	<div id="starship">
 		<i class="fas fa-space-shuttle"></i>
 	</div>
+
+	</div>
 </section>
-<section id="skills">
+<section id="skills" class="container">
 	
-	<div class="great_container">
+	<div class="col-xs-12">
 		<h2>SKILLS</h2>
 	</div>
-	<div class="great_container">
+	<div class="col-xs-12">
 		<h3>FUNDAMENTALS</h3>
-		<figure>
+		<figure id='figmod' class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="1" data-color="#e44d26" class='full'></canvas>
 			<svg ><circle/></svg>
 			<p>HTML</p>
 			<img src="assets/img/html.png" />
 		</figure>
 
-		<figure>
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.9" data-color="#1758a7" class='full'></canvas>
 			<svg ><circle/></svg>
 			<p>CSS</p>
 			<img src="assets/img/css.png" />
 		</figure>
 
-		<figure>
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.7" data-color="#f7e723" class='full'></canvas>
 			<svg><circle/></svg>
 			<p>JAVASCRIPT</p>
 			<img src="assets/img/js.png" />
 		</figure>
 
-		<figure class="md-last">
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.85" data-color="#7b6fb5" class='full'></canvas>
 			<svg ><circle/> </svg>
 			<p>PHP</p>
@@ -259,23 +263,23 @@
 		</figure>
 	</div>
 
-	<div class="great_container">
+	<div class="col-xs-12">
 		<h3>FRONTEND</h3>
-		<figure>
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.4" data-color="#dd0031" class='full'></canvas>
 			<svg > <circle/> </svg>
 			<p>ANGULAR 2+</p>
 			<img src="assets/img/ng.png" />
 		</figure>
 
-		<figure>
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.9" data-color="#0868ab" class='full'></canvas>
 			<svg > <circle/> </svg>
 			<p>JQUERY</p>
 			<img src="assets/img/jquery.png" />
 		</figure>
 		
-		<figure>
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.95" data-color="#563d7c" class='full'></canvas>
 			<svg > <circle/> </svg>
 			<p>BOOTSTRAP</p>
@@ -283,23 +287,23 @@
 		</figure>
 	</div>
 
-	<div class="great_container">
+	<div class="col-xs-12">
 		<h3>BACKEND & DATABASE</h3>
-		<figure>
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.3" data-color="#fb503b" class='full'></canvas>
 			<svg > <circle/> </svg>
 			<p>LARAVEL</p>
 			<img src="assets/img/lv.png" />
 		</figure>
 
-		<figure>
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.2" data-color="#669f64" class='full'></canvas>
 			<svg > <circle/> </svg>
 			<p>NODE.JS</p>
 			<img src="assets/img/node.png" />
 		</figure>
 
-		<figure>
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.8" data-color="#ce8b2c" class='full'></canvas>
 			<svg > <circle/> </svg>
 			<p>MYSQL</p>
@@ -307,16 +311,16 @@
 		</figure>
 	</div>
 
-	<div class="great_container">
+	<div class="col-xs-12">
 		<h3>CMS</h3>
-		<figure>
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.95" data-color="#35393f" class='full'></canvas>
 			<svg > <circle/> </svg>
 			<p>WORDPRESS</p>
 			<img src="assets/img/wp.png" />
 		</figure>
 
-		<figure>
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.9" data-color="#de006e" class='full'></canvas>
 			<svg > <circle/> </svg>
 			<p>PRESTASHOP</p>
@@ -324,30 +328,30 @@
 		</figure>
 	</div>
 
-	<div class="great_container">
+	<div class="col-xs-12">
 		<h3>PREPROCESSORS & TOOLS</h3>
-		<figure>
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.3" data-color="#cd679a" class='full'></canvas>
 			<svg > <circle/> </svg>
 			<p>SASS</p>
 			<img src="assets/img/sass.png" />
 		</figure>
 
-		<figure>
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.2" data-color="#d34a47" class='full'></canvas>
 			<svg > <circle/> </svg>
 			<p>GULP</p>
 			<img src="assets/img/gulp.png" />
 		</figure>
 
-		<figure>
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.1" data-color="#f05033" class='full'></canvas>
 			<svg > <circle/> </svg>
 			<p>GIT</p>
 			<img src="assets/img/git.png" />
 		</figure>
 
-		<figure class="md-last">
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.2" data-color="#da0023" class='full'></canvas>
 			<svg > <circle/> </svg>
 			<p>NPM</p>
@@ -355,44 +359,44 @@
 		</figure>
 	</div>
 
-	<div class="great_container">
+	<div class="col-xs-12">
 		<h3>SOFTWARE & OS</h3>
-		<figure>
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.9" data-color="#dd4814" class='full'></canvas>
 			<svg > <circle/> </svg>
 			<p>UBUNTU</p>
 			<img src="assets/img/ubuntu.png" />
 		</figure>
 		
-		<figure>
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.85" data-color="#0eb5f1" class='full'></canvas>
 			<svg > <circle/> </svg>
 			<p>WINDOWS</p>
 			<img src="assets/img/windows.png" />
 		</figure>
 
-		<figure>
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.8" data-color="#eb3c00" class='full'></canvas>
 			<svg > <circle/> </svg>
 			<p>OFFICE</p>
 			<img src="assets/img/office.png" />
 		</figure>
 
-		<figure class="md-last">
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.15" data-color="#383838" class='full'></canvas>
 			<svg > <circle/> </svg>
 			<p>SHELL SCRIPTING</p>
 			<img src="assets/img/shell.png" />
 		</figure>
 
-		<figure >
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.2" data-color="#242238" class='full'></canvas>
 			<svg > <circle/> </svg>
 			<p>PHOTOSHOP</p>
 			<img src="assets/img/photoshop.png" />
 		</figure>
 
-		<figure>
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.7" data-color="#706a52" class='full'></canvas>
 			<svg > <circle/> </svg>
 			<p>GIMP</p>
@@ -403,24 +407,24 @@
 
 	</div>
 
-	<div class="great_container">
+	<div class="col-xs-12">
 		<h3>OTHER</h3>
 
-		<figure>
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.4" data-color="#649ad2" class='full'></canvas>
 			<svg > <circle/> </svg>
 			<p>C++</p>
 			<img src="assets/img/cpp.png" />
 		</figure>
 
-		<figure>
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.5" data-color="#007acc" class='full'></canvas>
 			<svg > <circle/> </svg>
 			<p>TYPESCRIPT</p>
 			<img src="assets/img/ts.png" />
 		</figure>
 
-		<figure>
+		<figure class="col-xs-6 col-sm-4 col-md-3">
 			<canvas data-limit="0.95" data-color="black" class='full'></canvas>
 			<svg> <circle/> </svg>
 			<p>LATEX</p>
