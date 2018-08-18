@@ -27,7 +27,7 @@ module.exports = "#app{ display: block; margin-left: auto; margin-right: auto; }
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1 [class.popupped]=\"isGameOver\" style=\"position: absolute; z-index: 10; display: none; height:150px; top:50px; background-color: rgba(0.7,23,74,140); width: 50%; margin-left: 25%; color:yellow;\">\n\tGAME OVER <br>\n\t\t\t\t<button (click)='restart()'>RESTART</button>\n\n</h1>\n\n<div id='app' [style.width.px]='appWidth' >\n\t<aside >\n\t\t<div id='dashboard' style=\"float: left;\">\n\t\t\t<i class=\"ctrl fa fa-play\" (click)='pause()'></i>\n\t\t\t\n\t\t\t<i class=\"ctrl fa fa-pause\" (click)='restart()'></i>\n\t\t</div>\t\n\t\t<app-next style='float:left;' [nextId]='nextId'></app-next>\n\n\t\t<div id='score' >\n\t\t\t<div>\n\t\t\t<h2>SCORE</h2> \n\t\t\t<p>{{score}}</p>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t<h2>BEST</h2>\n\t\t\t<p>{{bestScore}}</p>\n\t\t\t</div>\n\t\t</div>\n\t</aside>\n\t<app-chessboard (changeNext)=\"nextId= $event\" (declareGameOver)='gameOver()' (updateScore)=\"updateScore($event)\" [gameId]='gameId'></app-chessboard>\n\t\n</div>\n\n<div id=\"commands\" >\n\t<span> <i class=\"fas fa-long-arrow-alt-left\"></i> </span>\n\t<span> <i class=\"fas fa-long-arrow-alt-right\"></i> </span> \n\t<span> <i class=\"fas fa-long-arrow-alt-down\"></i> </span>\n\t<span> <i class=\"fas rotate fa-sync-alt\"></i> </span>\n</div>"
+module.exports = "<h1 [class.popupped]=\"isGameOver\" style=\"position: absolute; z-index: 10; display: none; height:150px; top:50px; background-color: rgba(0.7,23,74,140); width: 50%; margin-left: 25%; color:yellow;\">\n\tGAME OVER <br>\n\t\t\t\t<button (click)='restart()'>RESTART</button>\n\n</h1>\n\n<div id='app' [style.width.px]='appWidth' >\n\t<aside >\n\t\t<div id='dashboard' style=\"float: left;\">\n\t\t\t<i class=\"ctrl fa fa-play\" (click)='pause()'></i>\n\t\t\t\n\t\t\t<i class=\"ctrl fa fa-pause\" (click)='restart()'></i>\n\t\t</div>\t\n\t\t<app-next style='float:left;' [nextId]='nextId'></app-next>\n\n\t\t<div id='score' >\n\t\t\t<div>\n\t\t\t<h2>SCORE</h2> \n\t\t\t<p>{{score}}</p>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t<h2>BEST</h2>\n\t\t\t<p>{{bestScore}}</p>\n\t\t\t</div>\n\t\t</div>\n\t</aside>\n\t<app-chessboard (changeNext)=\"nextId= $event\" (declareGameOver)='gameOver()' (updateScore)=\"updateScore($event)\" [gameId]='gameId'></app-chessboard>\n\t\n</div>\n\n<div id=\"commands\" >\n\t<span (click)=\"action.hearKey('ArrowLeft')\"> <i class=\"fas fa-long-arrow-alt-left\"></i> </span>\n\t<span (click)=\"action.hearKey('ArrowRight')\"> <i class=\"fas fa-long-arrow-alt-right\"></i> </span> \n\t<span (click)=\"action.hearKey('ArrowDown')\"> <i class=\"fas fa-long-arrow-alt-down\"></i> </span>\n\t<span (click)=\"action.hearKey('ArrowUp')\"> <i class=\"fas rotate fa-sync-alt\"></i> </span>\n</div>"
 
 /***/ }),
 
@@ -435,14 +435,14 @@ var CONFIG_SLOT_WIDTH = sw;
 /***/ "./src/app/next/next.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "\n.slot1{ background:#1E88E5; } /*celeste*/ .slot2{ background: #4CAF50; } /*verde*/ .slot3{ background: #F4511E; } /* rossarancione */ .slot4{ background: #C2185B; } /* rosa */ .slot5{ background: #FDD835; } /*giallo */ .slot6{ background: #8E24AA; } /* viola */ .slot7{ background: #c62828;} /*arancione*/  "
+module.exports = "\n.slot1{ background:#1E88E5; } /*celeste*/ .slot2{ background: #4CAF50; } /*verde*/ .slot3{ background: #F4511E; } /* rossarancione */ .slot4{ background: #C2185B; } /* rosa */ .slot5{ background: #FDD835; } /*giallo */ .slot6{ background: #8E24AA; } /* viola */ .slot7{ background: #c62828;} /*arancione*/ @media only screen and (max-width: 900px){\n\t#nextpiece{ display: none; }\n}"
 
 /***/ }),
 
 /***/ "./src/app/next/next.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div [style.width.px]='rowsNumber' style='float:left; '>\n<div *ngFor='let slot of nextpiece.slots' style=\"float:left; width:20px; height:20px;\" class=\"slot{{slot.value}}\">\n</div>\n</div>\n\n\n"
+module.exports = "\n<div [style.width.px]='rowsNumber' id='nextpiece' style='float:left; '>\n<div *ngFor='let slot of nextpiece.slots' style=\"float:left; width:20px; height:20px;\" class=\"slot{{slot.value}}\">\n</div>\n</div>\n\n\n"
 
 /***/ }),
 
