@@ -226,10 +226,10 @@ facebook :<a href="https://www.facebook.com/pages/Generatore-automatico-di-versi
 </main>
 <footer >
 <ul>
-    
-	<li style="display:none;">
+    <?php /*
+	<li>
 		<button id="serio_f" class='extra'>seriamente</button> 
-	</li>
+	</li>*/ ?>
 	<li>
 		<button id="credits_f" style="margin-left:10px; margin-right:10px;" class='extra'>crediti</button>
 	</li> 
