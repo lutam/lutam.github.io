@@ -337,7 +337,7 @@ var GRID = 20;
 /***/ "./src/app/header/header.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "#header{ width:90%; margin:5%; height: 10%; background-color: #1abc9c; }\nh1{ color: white; float: left; width: 50%; font-family: sans-serif; padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box; }\n#header p { width:auto; padding:10px; -webkit-box-sizing:border-box; box-sizing:border-box; text-align:center; float: right; color: white; font-family: sans-serif; font-weight: bold;  }\n#header button{ background: white;\nborder: 0;\npadding: 4%;\nmargin-top: 0;\nfloat: right;\nmargin-left: 21px;\nheight: 100%; cursor: pointer;}\n#header button:hover{ background-color: #333; color: white; }\n@media only screen and (max-width:520px){\n\t#header p{ display: none; }\n}"
+module.exports = "#header{ width:90%; margin:5%; height: 10%; background-color: #1abc9c; overflow: hidden; }\nh1{ color: white; float: left; width: 50%; font-family: sans-serif; padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box; }\n#header p { width:auto; padding:10px; -webkit-box-sizing:border-box; box-sizing:border-box; text-align:center; float: right; color: white; font-family: sans-serif; font-weight: bold;  }\n#header button{ background: white;\nborder: 0;\npadding: 4%;\nmargin-top: 0;\nfloat: right;\nmargin-left: 21px;\nheight: 100%; cursor: pointer;}\n#header button:hover{ background-color: #333; color: white; }\n@media only screen and (max-width:900px){\n\t#header p{ display: none; }\n\th1{ font-size: 20px; }\n}"
 
 /***/ }),
 
