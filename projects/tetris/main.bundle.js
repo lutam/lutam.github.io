@@ -20,7 +20,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /***/ "./src/app/app.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "#app{ display: block; margin-left: auto; margin-right: auto; }\n\naside{ width: 100%; display: block; background-color: #212121; height: 100px;\npadding: 10px;\n-webkit-box-sizing: border-box;\n        box-sizing: border-box; }\n\n#dashboard{ float: left; width: 25%;  }\n\n#dashboard .ctrl{ float: left; color: white; display: inline-block; width: 50%; }\n\n#score{ float: right;  width: 50%; height: 100%; display: table; }\n\n#score * { text-align: center; }\n\n#score div{ width: 50%; float: left; }\n\n#score div h2{ color: white; font-family: sans-serif; font-size:20px; font-weight: bolder; }\n\n#score div p{ color: white; font-family: sans-serif; font-size: 16px; }\n\nh1.popupped{ display: inline-block !important; }\n\n#commands{ display:none;  width: 50vw; margin-left: auto; margin-right: auto; }\n\n#commands span{ cursor:pointer; width: 11vw; margin-top: 2vw; margin-right:2vw; height:11vw; background:rgba(255, 255, 255, 0.45); border-radius:5px;  text-align:center; display: table; float: left;  }\n\n#commands span:last-child{ margin-right: 0; }\n\n#commands span:hover{ color:white; background-color: #333; }\n\n#commands span i{ display: table-cell; vertical-align: middle; font-size: 27px; }\n\n@media only screen and (max-width:900px) and (min-width: 769px){\n\t#commands{ display: block; }\n}\n\n@media only screen and (max-width: 768px){\n\t#commands{ width: 90vw; display: block; }\n\t#commands span{ width: 20vw; margin-right: 3.333vw; height: 20vw;  }\n}\n\n\n"
+module.exports = "#app{ display: block; margin-left: auto; margin-right: auto; }\n\naside{ width: 100%; overflow:hidden; display: block; background-color: #212121; height: 100px;\npadding: 10px;\n-webkit-box-sizing: border-box;\n        box-sizing: border-box; }\n\n#dashboard{ float: left; width: 25%;  }\n\n#dashboard .ctrl{ float: left; color: white; display: inline-block; width: 50%; }\n\n#score{ float: right;  width: 50%; height: 100%; display: table; }\n\n#score * { text-align: center; }\n\n#score div{ width: 50%; float: left; }\n\n#score div h2{ color: white; font-family: sans-serif; font-size:20px; font-weight: bolder; }\n\n#score div p{ color: white; font-family: sans-serif; font-size: 16px; }\n\nh1.popupped{ display: inline-block !important; }\n\n#commands{ display:none;  width: 50vw; margin-left: auto; margin-right: auto; }\n\n#commands span{ cursor:pointer; width: 11vw; margin-top: 2vw; margin-right:2vw; height:11vw; background:rgba(255, 255, 255, 0.45); border-radius:5px;  text-align:center; display: table; float: left;  }\n\n#commands span:last-child{ margin-right: 0; }\n\n#commands span:hover{ color:white; background-color: #333; }\n\n#commands span i{ display: table-cell; vertical-align: middle; font-size: 27px; }\n\n@media only screen and (max-width:900px) and (min-width: 769px){\n\t#commands{ display: block; }\n}\n\n@media only screen and (max-width: 768px){\n\t#commands{ width: 90vw; display: block; }\n\t#commands span{ width: 20vw; margin-right: 3.333vw; height: 20vw;  }\n}\n\n\n"
 
 /***/ }),
 
@@ -401,7 +401,7 @@ var Slot = /** @class */ (function () {
 var CONFIG_HORIZONTAL_GRID = 10;
 var CONFIG_VERTICAL_GRID = 15;
 var wv = window.screen.width;
-var wh = window.screen.height - 100;
+var wh = window.screen.height - 150;
 if (wh <= 900 && wh > 768) {
     wh -= 0.13 * wv;
 }
