@@ -1,62 +1,21 @@
-#space_invaders{ height: 100%;
+	
+	#space_invaders{ height: 100%; padding-top: 50px; top: -105px; box-sizing: border-box; display: table;    }
+	#space_invaders_vertical_align{ display: table-cell; vertical-align: middle;  }
+	#skills .great_container{ margin-bottom: 20px;  }
+	#skills h3{ color: #333; font-weight: 900; font-family: montserrat; display: inline-block; width: 100%; margin-bottom: 30px; font-size: 15px; }
+	#skills .col-xs-12{ padding-left: 0; padding-right: 0; }
 
-padding-top: 50px;
-
-top: -105px;
-
-box-sizing: border-box; display: table;    }
-#space_invaders_vertical_align{ display: table-cell; vertical-align: middle;  }
-		#skills .great_container{ margin-bottom: 20px;  }
-		
-
-#skills h3{
-	color: #333;
-	font-weight: 900;
-	font-family: montserrat;
-	display: inline-block;
-	width: 100%;
-	margin-bottom: 30px;
-	font-size: 15px;
-}
-
-#skills .col-xs-12{ padding-left: 0; padding-right: 0; }
-
- figure{ position: relative; text-align: center;  margin-bottom: 30px !important; float: left; margin-right: 5%; }
- figure.md-last{ margin-right: 0; }
-  figure svg{ position: absolute; z-index: 0; left: 0; top: 0; }
-  figure canvas{ position: absolute; top: 0; left: 0; transform: rotate(-90deg); margin-left: 15px; }
-  canvas.full{ z-index: 1;}
-  circle{ fill: transparent; stroke: #ddd;  }
-
-  figure p{ color: black;
-position: relative;
-width: 100%;
-text-align: center;
-z-index: 9;
-padding-top: 55px;
-font-family: Montserrat;
-font-weight: 900; }
-
-  figure img{ text-align: center;
+ 	figure{ position: relative; text-align: center;  margin-bottom: 30px !important; float: left; margin-right: 5%; }
+ 	figure.md-last{ margin-right: 0; }
+  	figure svg{ position: absolute; z-index: 0; left: 0; top: 0; }
+  	figure canvas{ position: absolute; top: 0; left: 0;  -webkit-transform: rotate(-90deg); -moz-transform:    rotate(-90deg); -ms-transform: rotate(-90deg); -o-transform: rotate(-90deg); transform: rotate(-90deg); margin-left: 15px; }
+  	canvas.full{ z-index: 1;}
+  	circle{ fill: transparent; stroke: #ddd;  }
+	figure p{ color: black; position: relative; width: 100%; text-align: center; z-index: 9; padding-top: 55px; font-family: Montserrat; font-weight: 900; }
+	figure img{ text-align: center; position: relative; top: 4.5%; display: block; margin-left: auto; margin-right: auto; width: 95px; }
 
 
-position: relative;
-
-top: 4.5%;
-
-display: block;
-
-margin-left: auto;
-
-margin-right: auto;
-
-width: 95px; }
-
-
-@media only screen and (max-width: 992px){
-	figure p{ padding-top: 40px;
-margin: 0;
-font-size: 9px;
-font-weight: 100; }
-	figure img{ width: 30%; }
-}
+	@media only screen and (max-width: 992px){
+		figure p{ padding-top: 40px; margin: 0; font-size: 9px; font-weight: 100; }
+		figure img{ width: 30%; }
+	}

@@ -34,6 +34,8 @@
 
 .square {
   transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
   box-sizing: border-box;
   overflow: hidden;
   box-shadow: none;
@@ -86,7 +88,10 @@
 
 .square.triangled::after {
   border-radius: 0;
-  transform: rotate(45deg); }
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg); }
 
 .square.curved::after {
   border-radius: 50%; }
@@ -323,7 +328,10 @@ body.gameplay {
   position: relative;
   content: "";
   top: 0;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
   background-color: green;
   width: 200%;
   height: 200%; }
@@ -353,7 +361,10 @@ body.gameplay {
   display: none; }
 
 #starship i {
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
   position: relative;
   right: 1.75vw; }
 
@@ -378,7 +389,9 @@ body.gameplay {
   height: 14vw;
   height: 55px;
   margin-top: 40px;
-  transition: 0.4s all ease-in-out; }
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out; }
 
 #play:hover {
   color: #3498db;
