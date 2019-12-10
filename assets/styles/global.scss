@@ -1,8 +1,11 @@
+html{
+  overflow-x: hidden !important;
+}
 body{
   background: $lutam-light-blue;
   font-family: $main-font;
   font-size: 16px;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 
   &.noscroll{
     overflow: hidden;
@@ -18,9 +21,15 @@ body{
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 1px;
+  transition: 200ms all ease-in-out;
   &-blue{
     background: $lutam-blue;
     color: $lutam-white;
+    border: 1px solid $lutam-blue;
+    &:hover{
+      background: transparent;
+      color: $lutam-blue;
+    }
   }
 }
 
