@@ -1306,6 +1306,11 @@
           image: 'snake',
           link: '/projects/snake'
         }, {
+          title: 'Weather',
+          technology: 'jQuery',
+          image: 'weather',
+          link: '/projects/weather'
+        }, {
           title: 'Decimal Time',
           technology: 'jQuery',
           image: 'decimal-time',
