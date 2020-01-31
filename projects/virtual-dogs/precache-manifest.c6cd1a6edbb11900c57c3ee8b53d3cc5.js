@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e347db224270df504fa5b2dc9ff91b24",
+    "revision": "3c13a296273e3e177df1f3ec5445eafc",
     "url": "/projects/virtual-dogs/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/projects/virtual-dogs/static/css/2.3fafe98e.chunk.css"
   },
   {
-    "revision": "0c7f6324026f604fab29",
-    "url": "/projects/virtual-dogs/static/css/main.96b8b453.chunk.css"
+    "revision": "4fad1bf3d2e40e376900",
+    "url": "/projects/virtual-dogs/static/css/main.c0634798.chunk.css"
   },
   {
     "revision": "b84770b94b005fe8755b",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/projects/virtual-dogs/static/js/2.cf4ed1a7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0c7f6324026f604fab29",
+    "revision": "4fad1bf3d2e40e376900",
     "url": "/projects/virtual-dogs/static/js/main.027c1def.chunk.js"
   },
   {

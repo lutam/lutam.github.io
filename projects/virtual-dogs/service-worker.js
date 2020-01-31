@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/projects/virtual-dogs/precache-manifest.197c31b622340d20215e221cf86f553c.js"
+  "/projects/virtual-dogs/precache-manifest.c6cd1a6edbb11900c57c3ee8b53d3cc5.js"
 );
 
 self.addEventListener('message', (event) => {

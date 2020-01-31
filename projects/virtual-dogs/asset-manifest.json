@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/projects/virtual-dogs/static/css/main.96b8b453.chunk.css",
+    "main.css": "/projects/virtual-dogs/static/css/main.c0634798.chunk.css",
     "main.js": "/projects/virtual-dogs/static/js/main.027c1def.chunk.js",
     "main.js.map": "/projects/virtual-dogs/static/js/main.027c1def.chunk.js.map",
     "runtime-main.js": "/projects/virtual-dogs/static/js/runtime-main.f643357d.js",
@@ -9,10 +9,10 @@
     "static/js/2.cf4ed1a7.chunk.js": "/projects/virtual-dogs/static/js/2.cf4ed1a7.chunk.js",
     "static/js/2.cf4ed1a7.chunk.js.map": "/projects/virtual-dogs/static/js/2.cf4ed1a7.chunk.js.map",
     "index.html": "/projects/virtual-dogs/index.html",
-    "precache-manifest.197c31b622340d20215e221cf86f553c.js": "/projects/virtual-dogs/precache-manifest.197c31b622340d20215e221cf86f553c.js",
+    "precache-manifest.c6cd1a6edbb11900c57c3ee8b53d3cc5.js": "/projects/virtual-dogs/precache-manifest.c6cd1a6edbb11900c57c3ee8b53d3cc5.js",
     "service-worker.js": "/projects/virtual-dogs/service-worker.js",
     "static/css/2.3fafe98e.chunk.css.map": "/projects/virtual-dogs/static/css/2.3fafe98e.chunk.css.map",
-    "static/css/main.96b8b453.chunk.css.map": "/projects/virtual-dogs/static/css/main.96b8b453.chunk.css.map",
+    "static/css/main.c0634798.chunk.css.map": "/projects/virtual-dogs/static/css/main.c0634798.chunk.css.map",
     "static/js/2.cf4ed1a7.chunk.js.LICENSE.txt": "/projects/virtual-dogs/static/js/2.cf4ed1a7.chunk.js.LICENSE.txt",
     "static/media/batman.png": "/projects/virtual-dogs/static/media/batman.e2de96bf.png",
     "static/media/index.css": "/projects/virtual-dogs/static/media/dosis-latin-800.8ba2fbed.woff",
@@ -26,7 +26,7 @@
     "static/js/runtime-main.f643357d.js",
     "static/css/2.3fafe98e.chunk.css",
     "static/js/2.cf4ed1a7.chunk.js",
-    "static/css/main.96b8b453.chunk.css",
+    "static/css/main.c0634798.chunk.css",
     "static/js/main.027c1def.chunk.js"
   ]
 }
