@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0; }
+
+body {
+  background: #4f5962;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+#app {
+  width: 100%;
+  overflow: hidden;
+  max-width: 400px;
+  display: block;
+  position: relative;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 2px 2px 17px #333; }
+
+#main {
+  width: 100%;
+  height: 70%;
+  display: inline-block;
+  background: #f0f8fa; }
+
+#settings_switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #a4acaf;
+  font-size: 20px;
+  z-index: 9; }
+
+#settings_switch:hover {
+  color: #333; }
+
+#details {
+  background: #2e3336;
+  width: 100%;
+  height: 30%;
+  display: table; }
+  #details .inner {
+    padding: 10%;
+    display: table-cell;
+    vertical-align: middle; }
+    #details .inner .col {
+      width: 33.33%;
+      text-align: center;
+      cursor: default;
+      position: relative;
+      float: left;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      color: white;
+      font-weight: bold; }
+      #details .inner .col i {
+        color: #54595c;
+        font-size: 20px;
+        margin-right: 5px;
+        position: relative;
+        top: 3px; }
+      #details .inner .col span {
+        line-height: 20px; }
+      #details .inner .col div.label {
+        background: white;
+        padding: 5px;
+        position: absolute;
+        font-size: 10px;
+        top: 15px;
+        left: 0;
+        display: none;
+        color: #2e3336;
+        box-shadow: 2px 1px 3px black;
+        border-radius: 3px;
+        font-weight: 400; }
+    #details .inner .col:hover div.label {
+      display: inline; }
+
+#weather {
+  text-align: center;
+  padding: 70px 0; }
+  #weather i {
+    font-size: 110px;
+    color: #788284; }
+
+#info {
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 100%;
+  position: relative; }
+  #info * {
+    color: #a4acaf;
+    font-family: 'Montserrat', sans-serif; }
+  #info p.temperature {
+    padding-left: 5%;
+    float: left;
+    width: 20%;
+    text-align: center;
+    font-size: 50px;
+    line-height: 50px; }
+  #info div.txt {
+    width: 75%;
+    float: left;
+    padding-left: 10px;
+    padding-right: 85px;
+    box-sizing: border-box;
+    float: left; }
+    #info div.txt p.status {
+      font-weight: 300;
+      font-size: 21px; }
+  #info p.day {
+    top: -15px;
+    position: absolute;
+    fpnt-size: 13px;
+    height: 75px;
+    word-spacing: 100%;
+    width: 75px;
+    right: 0;
+    text-align: center;
+    background: #55b9ea;
+    display: table; }
+    #info p.day span {
+      display: table-cell;
+      text-transform: uppercase;
+      vertical-align: middle;
+      font-size: 13px;
+      color: white;
+      font-weight: bold; }
+
+#settings {
+  width: 100%;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: #f0f8fa;
+  height: 100%;
+  display: none; }
+
+#settings label {
+  color: #a4acaf;
+  width: 100%;
+  display: block;
+  margin-top: 60px;
+  font-size: 25px;
+  font-weight: 300; }
+
+#settings input {
+  border: 1px solid #a4acaf;
+  box-shadow: none;
+  height: 60px;
+  border-radius: 5px;
+  margin: 15px 0;
+  padding: 15px;
+  font-size: 25px;
+  box-sizing: border-box;
+  width: 100%; }
+
+#settings button {
+  width: 40%;
+  background: #2e3336;
+  border: 1px solid #2e3336;
+  color: #f0f8fa;
+  height: 45px;
+  min-width: 150px;
+  cursor: pointer;
+  -moz-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out; }
+
+#settings button:hover {
+  background: #f0f8fa;
+  color: #2e3336; }
+
+body.settings_is_open #settings {
+  display: block; }
+
+/*# sourceMappingURL=style.css.map */
