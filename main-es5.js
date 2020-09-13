@@ -111,7 +111,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<section class=\"container\" id=\"works\">\n  <div class=\"row\" *ngFor=\"let work of works\">\n    <div class=\"col-12 col-lg-8 offset-lg-2 work\">\n      <div class=\"image\">\n        <img src=\"{{work.companyImage}}\" alt=\"{{work.companyName}} logo\" title=\"{{work.title}} @{{work.companyName}}\"/>\n      </div>\n      <div>\n        <h3 class=\"bold\">{{work.title}}</h3>\n        <p class=\"company\">{{work.companyName}}</p>\n        <div class=\"duration\">\n          <p>\n            <span>{{work.startDate| date:'MMM yyyy'}}</span>\n            -\n            <span *ngIf=\"!work.isCurrent; else present\">{{work.endDate| date:'MMM yyyy'}}</span>\n            <ng-template #present>Present</ng-template>\n          </p>\n          <span>\n            &#183;\n          </span>\n          <p>\n            {{formatDuration(work.endDate, work.startDate) }}\n          </p>\n        </div>\n        <p class=\"description\">\n          {{work.description}}\n        </p>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section class=\"container\" id=\"divertissements\">\n  <div class=\"row\">\n    <div class=\"col-12\">\n      <h4 class=\"s-title\">\n        divertissement\n      </h4>\n    </div>\n    <div class=\"col-6 col-lg-4\" *ngFor=\"let divertissement of divertissements\">\n      <div class=\"divertissement\" [ngStyle]=\"{'background-image': 'url(/assets/images/divertissements/'+divertissement.image+'.png)'}\">\n        <p class=\"description\">\n          <span class=\"title\"> {{divertissement.title}}</span>\n          <span class=\"technology\">{{divertissement.technology}}</span>\n        </p>\n        <a class=\"description\" target=\"_blank\" href=\"{{divertissement.link}}\">VIEW</a>\n      </div>\n    </div>\n  </div>\n</section>\n";
+    __webpack_exports__["default"] = "<section class=\"container\" id=\"works\">\n  <div class=\"row\" *ngFor=\"let work of works\">\n    <div class=\"col-12 col-lg-8 offset-lg-2 work\">\n      <div class=\"image\">\n        <img src=\"{{work.companyImage}}\" alt=\"{{work.companyName}} logo\" title=\"{{work.title}} @{{work.companyName}}\"/>\n      </div>\n      <div>\n        <h3 class=\"bold\">{{work.title}}</h3>\n        <p class=\"company\">{{work.companyName}}</p>\n        <div class=\"duration\">\n          <p>\n            <span>{{work.startDate| date:'MMM yyyy'}}</span>\n            -\n            <span *ngIf=\"!work.isCurrent; else present\">{{work.endDate| date:'MMM yyyy'}}</span>\n            <ng-template #present>Present</ng-template>\n          </p>\n          <span>\n            &#183;\n          </span>\n          <p>\n            {{formatDuration(work.endDate, work.startDate) }}\n          </p>\n        </div>\n        <p [innerHTML]=\"work.description\" class=\"description\"></p>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section class=\"container\" id=\"divertissements\">\n  <div class=\"row\">\n    <div class=\"col-12\">\n      <h4 class=\"s-title\">\n        divertissement\n      </h4>\n    </div>\n    <div class=\"col-6 col-lg-4\" *ngFor=\"let divertissement of divertissements\">\n      <div class=\"divertissement\" [ngStyle]=\"{'background-image': 'url(/assets/images/divertissements/'+divertissement.image+'.png)'}\">\n        <p class=\"description\">\n          <span class=\"title\"> {{divertissement.title}}</span>\n          <span class=\"technology\">{{divertissement.technology}}</span>\n        </p>\n        <a class=\"description\" target=\"_blank\" href=\"{{divertissement.link}}\">VIEW</a>\n      </div>\n    </div>\n  </div>\n</section>\n";
     /***/
   },
 
@@ -151,7 +151,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div id=\"app-header\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div routerLink=\"/\" class=\"col-3\">\n        <a routerLink=\"/\" class=\"logo\">\n          LT\n        </a>\n      </div>\n      <nav class=\"col-9\">\n        <a routerLink=\"/\" fragment=\"skills\">\n          <span>Skills</span>\n        </a>\n        <a routerLink=\"/works\">\n          <span>Works</span>\n        </a>\n        <a target=\"_blank\" href=\"https://www.linkedin.com/in/ludovico-t-374957180/\">\n          <span><i class=\"icon-linkedin\"></i></span>\n        </a>\n        <a target=\"_blank\" href=\"https://github.com/lutam/\">\n          <span><i class=\"icon-github\"></i></span>\n        </a>\n      </nav>\n    </div>\n  </div>\n</div>\n";
+    __webpack_exports__["default"] = "<div id=\"app-header\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div routerLink=\"/\" class=\"col-3\">\n        <a routerLink=\"/\" class=\"logo\">\n          LT\n        </a>\n      </div>\n      <nav class=\"col-9\">\n        <a routerLink=\"/\" fragment=\"skills\">\n          <span>Skills</span>\n        </a>\n        <a routerLink=\"/experience\">\n          <span>Experience</span>\n        </a>\n        <a target=\"_blank\" href=\"https://www.linkedin.com/in/ludovico-t-374957180/\">\n          <span><i class=\"icon-linkedin\"></i></span>\n        </a>\n        <a target=\"_blank\" href=\"https://github.com/lutam/\">\n          <span><i class=\"icon-github\"></i></span>\n        </a>\n      </nav>\n    </div>\n  </div>\n</div>\n";
     /***/
   },
 
@@ -1119,24 +1119,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, {
             title: 'Frontend',
             skills: [{
+              color: '#61dbfb',
+              name: 'React',
+              percentage: 70,
+              image: 'react'
+            }, {
               color: '#e23237',
               name: 'Angular 2+',
-              percentage: 50,
+              percentage: 70,
               image: 'angular'
             }, {
               color: '#41b883',
               name: 'Vue.js',
-              percentage: 70,
+              percentage: 85,
               image: 'vue'
             }, {
               color: '#cd6799',
               name: 'SASS',
-              percentage: 80,
+              percentage: 90,
               image: 'sass'
             }, {
               color: '#007acc',
               name: 'TypeScript',
-              percentage: 50,
+              percentage: 90,
               image: 'typescript'
             }, {
               color: '#0767aa',
@@ -1159,17 +1164,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }, {
               color: '#fb503b',
               name: 'Laravel',
-              percentage: 30,
+              percentage: 40,
               image: 'laravel'
             }, {
               color: '#5aa845',
               name: 'Node.js',
-              percentage: 5,
+              percentage: 30,
               image: 'nodejs'
             }, {
               color: '#f8981d',
               name: 'MySQL',
-              percentage: 55,
+              percentage: 40,
               image: 'mysql'
             }]
           }, {
@@ -1200,13 +1205,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }, {
               color: '#8ed6fb',
               name: 'Webpack',
-              percentage: 50,
+              percentage: 70,
               image: 'webpack'
             }, {
-              color: '#d34a47',
-              name: 'Gulp',
-              percentage: 10,
-              image: 'gulp'
+              color: '#c63d14',
+              name: 'Jest',
+              percentage: 50,
+              image: 'jest'
             }, {
               color: '#1d91b4',
               name: 'Docker',
@@ -1313,8 +1318,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.works = [{
             companyImage: '/assets/images/works/crispy.png',
             title: 'Senior Frontend Developer',
-            companyName: 'Crispy Bacon.',
-            description: 'PED is a Tech Company based in Milan, Catania and Ragusa who designs and creates innovative web applications. I am a member of the frontend team in which I can improve day by day my knowledge of web technologies such as js frameworks and most used CMSs ',
+            companyName: 'Crispy Bacon',
+            description: 'Crispy Bacon is a software development company specialized in web and mobile applications. Among the Crispy Bacon\'s clients there are several national wide companies in the banking, lottery and IOT sectors.\n' + '<br><br>' + 'The client of the project I\'ve been working on was Sisal, the italian leader company in the betting and lottery sector.\n' + 'I was responsible of a 5-people international team dedicated to the frontend developing of the software used in all the italian Sisal\'s betting shops.\n' + '<br><br>' + 'The software was entirely made using Typescript React and was designed to be the most re-usable, testable and well documented as possible.',
             startDate: 1580599025000,
             endDate: 1598915825000,
             isCurrent: false
@@ -1322,7 +1327,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             companyImage: '/assets/images/works/ped.svg',
             title: 'Frontend Developer',
             companyName: 'PED.',
-            description: 'PED is a Tech Company based in Milan, Catania and Ragusa specialized in e-commerce and web applications. I was a member of the frontend team in which I can improve day by day my knowledge of web technologies such as js frameworks and most used CMSs ',
+            description: 'PED is a tech-company based in Milan, Catania and Ragusa specialized in customized web applications and websites for startup companies.\n' + '<br><br>' + 'Most of the projects I\'ve been working on were RESTful applications. I was accountable, together with the other members of the frontend team, for the developing of Vue.js platforms. The usual stack also included the latest web technologies such as Webpack or SASS.\n' + '<br><br>' + 'I also worked in PED as a Full Stack developer using the most common CMSs such as Wordpress, PrestaShop and Joomla.',
             startDate: 1538402356000,
             endDate: 1577833200000,
             isCurrent: false
@@ -1330,23 +1335,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             companyImage: '/assets/images/works/lorenzo-vinci.svg',
             title: 'Full Stack Developer',
             companyName: 'Lorenzo Vinci',
-            description: 'Lorenzo Vinci is a company specialized in italian gourmet food. I was the developer of both the PrestaShop e-commerce and the Wordpress magazine, working side by side with designers and members of sales team.',
+            description: 'Lorenzo Vinci is a well-known website for the lovers of the italian gourmet and traditional food. The Lorenzo Vinci\'s online shop sells food products throughout Italy, while the blog is a point of reference for recipes and informations about italian food.\n' + '<br><br>' + 'I was the only responsible for the backend and frontend developing and maintenance of both the sites: the PrestaShop e-commerce and the Wordpress blog.\n' + 'I also created an external backoffice platform for prices management in pure PHP and JQuery. ',
             startDate: 1475330356000,
             endDate: 1535810356000
-          }, {
-            companyImage: '/assets/images/works/air-atlantis.svg',
-            title: 'Full Stack Developer',
-            companyName: 'Air Atlantis',
-            description: 'Air Atlantis is a multimedia company. In the 3 months I worked with them, I made some Wordpress websites and I improved their company website.',
-            startDate: 1462111156000,
-            endDate: 1469973556000
           }, {
             companyImage: '/assets/images/works/sis.svg',
             title: 'Full Stack Developer',
             companyName: 'Silenzio In Sala',
-            description: 'Silenzio In Sala is a film review website. I entirely designed the project from scratch, from UI to server architecture. It was made in pure PHP (no framework), jQuery and Bootstrap and it included also a backoffice panel.',
+            description: 'Silenzio in Sala is today a followed italian website for cinema lovers and film reviews. During the time I\'ve been working for Silenzio In Sala I helped to create the site from scratch according to redational and SEO needs.\n' + '<br><br>' + 'I was accountable for every technical and graphic aspect of the website, including the UI design, the developing and the server architecture.\n' + '<br><br>' + 'Silenzio In Sala\'s backend was entirely made in pure PHP, while JQuery and CSS3 were used for the responsive and SEO-friendly frontend.',
             startDate: 1430488756000,
             endDate: 1488376756000
+          }, {
+            companyImage: '/assets/images/works/air-atlantis.svg',
+            title: 'Full Stack Developer',
+            companyName: 'Air Atlantis',
+            description: 'Air Atlantis is a multimedia company based in Milan. <br><br>I helped developing some Wordpress websites and I also improved the company website adding a new backoffice section.',
+            startDate: 1462111156000,
+            endDate: 1469973556000
           }];
           this.divertissements = [{
             title: 'Solar System',
@@ -1842,7 +1847,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       path: '',
       component: _components_pages_homepage_homepage_component__WEBPACK_IMPORTED_MODULE_3__["HomepageComponent"]
     }, {
-      path: 'works',
+      path: 'experience',
       component: _components_pages_works_works_component__WEBPACK_IMPORTED_MODULE_4__["WorksComponent"]
     }, {
       path: 'bio',
