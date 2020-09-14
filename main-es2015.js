@@ -36,19 +36,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/pages/bio/bio.component.html":
-/*!***********************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/pages/bio/bio.component.html ***!
-  \***********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>bio works!</p>\n");
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/pages/homepage/homepage.component.html":
 /*!*********************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/pages/homepage/homepage.component.html ***!
@@ -375,8 +362,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_partials_header_header_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/partials/header/header.component */ "./src/app/components/partials/header/header.component.ts");
 /* harmony import */ var _components_pages_works_works_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/pages/works/works.component */ "./src/app/components/pages/works/works.component.ts");
 /* harmony import */ var ng_circle_progress__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ng-circle-progress */ "./node_modules/ng-circle-progress/fesm2015/ng-circle-progress.js");
-/* harmony import */ var _components_pages_bio_bio_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/pages/bio/bio.component */ "./src/app/components/pages/bio/bio.component.ts");
-
 
 
 
@@ -397,7 +382,6 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _components_partials_game_game_component__WEBPACK_IMPORTED_MODULE_6__["GameComponent"],
             _components_partials_header_header_component__WEBPACK_IMPORTED_MODULE_7__["HeaderComponent"],
             _components_pages_works_works_component__WEBPACK_IMPORTED_MODULE_8__["WorksComponent"],
-            _components_pages_bio_bio_component__WEBPACK_IMPORTED_MODULE_10__["BioComponent"],
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -460,50 +444,6 @@ AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./app.component.scss */ "./src/app/components/app.component.scss")).default]
     })
 ], AppComponent);
-
-
-
-/***/ }),
-
-/***/ "./src/app/components/pages/bio/bio.component.scss":
-/*!*********************************************************!*\
-  !*** ./src/app/components/pages/bio/bio.component.scss ***!
-  \*********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvcGFnZXMvYmlvL2Jpby5jb21wb25lbnQuc2NzcyJ9 */");
-
-/***/ }),
-
-/***/ "./src/app/components/pages/bio/bio.component.ts":
-/*!*******************************************************!*\
-  !*** ./src/app/components/pages/bio/bio.component.ts ***!
-  \*******************************************************/
-/*! exports provided: BioComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BioComponent", function() { return BioComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-
-
-let BioComponent = class BioComponent {
-    constructor() { }
-    ngOnInit() {
-    }
-};
-BioComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-bio',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./bio.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/pages/bio/bio.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./bio.component.scss */ "./src/app/components/pages/bio/bio.component.scss")).default]
-    })
-], BioComponent);
 
 
 
@@ -1154,8 +1094,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _components_pages_homepage_homepage_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/pages/homepage/homepage.component */ "./src/app/components/pages/homepage/homepage.component.ts");
 /* harmony import */ var _components_pages_works_works_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/pages/works/works.component */ "./src/app/components/pages/works/works.component.ts");
-/* harmony import */ var _components_pages_bio_bio_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/pages/bio/bio.component */ "./src/app/components/pages/bio/bio.component.ts");
-
 
 
 
@@ -1164,7 +1102,7 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     { path: '', component: _components_pages_homepage_homepage_component__WEBPACK_IMPORTED_MODULE_3__["HomepageComponent"] },
     { path: 'experience', component: _components_pages_works_works_component__WEBPACK_IMPORTED_MODULE_4__["WorksComponent"] },
-    { path: 'bio', component: _components_pages_bio_bio_component__WEBPACK_IMPORTED_MODULE_5__["BioComponent"] },
+    { path: '*', redirectTo: 'experience' },
 ];
 let RoutesModule = class RoutesModule {
 };
