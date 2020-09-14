@@ -1741,7 +1741,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       path: 'experience',
       component: _components_pages_works_works_component__WEBPACK_IMPORTED_MODULE_4__["WorksComponent"]
     }, {
-      path: '*',
+      path: '**',
       redirectTo: 'experience'
     }];
 
