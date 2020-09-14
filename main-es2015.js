@@ -1102,7 +1102,7 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     { path: '', component: _components_pages_homepage_homepage_component__WEBPACK_IMPORTED_MODULE_3__["HomepageComponent"] },
     { path: 'experience', component: _components_pages_works_works_component__WEBPACK_IMPORTED_MODULE_4__["WorksComponent"] },
-    { path: '**', redirectTo: 'experience' },
+    { path: '**', component: _components_pages_works_works_component__WEBPACK_IMPORTED_MODULE_4__["WorksComponent"] },
 ];
 let RoutesModule = class RoutesModule {
 };
