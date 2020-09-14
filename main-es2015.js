@@ -84,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div id=\"app-header\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div routerLink=\"/\" class=\"col-3\">\n        <a routerLink=\"/\" class=\"logo\">\n          LT\n        </a>\n      </div>\n      <nav class=\"col-9\">\n        <a routerLink=\"/\" fragment=\"skills\">\n          <span>Skills</span>\n        </a>\n        <a routerLink=\"/experience\">\n          <span>Experience</span>\n        </a>\n        <a target=\"_blank\" href=\"https://www.linkedin.com/in/ludovico-t-374957180/\">\n          <span><i class=\"icon-linkedin\"></i></span>\n        </a>\n        <a target=\"_blank\" href=\"https://github.com/lutam/\">\n          <span><i class=\"icon-github\"></i></span>\n        </a>\n      </nav>\n    </div>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div id=\"app-header\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div routerLink=\"/\" class=\"col-3\">\n        <a routerLink=\"/\" class=\"logo\">\n          LT\n        </a>\n      </div>\n      <nav class=\"col-9\">\n        <a routerLink=\"/\" fragment=\"skills\">\n          <span>Skills</span>\n        </a>\n        <a routerLink=\"/experience\">\n          <span>Experiences</span>\n        </a>\n        <a target=\"_blank\" href=\"https://www.linkedin.com/in/ludovico-t-374957180/\">\n          <span><i class=\"icon-linkedin\"></i></span>\n        </a>\n        <a target=\"_blank\" href=\"https://github.com/lutam/\">\n          <span><i class=\"icon-github\"></i></span>\n        </a>\n      </nav>\n    </div>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -1102,7 +1102,7 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     { path: '', component: _components_pages_homepage_homepage_component__WEBPACK_IMPORTED_MODULE_3__["HomepageComponent"] },
     { path: 'experience', component: _components_pages_works_works_component__WEBPACK_IMPORTED_MODULE_4__["WorksComponent"] },
-    { path: '**', component: _components_pages_works_works_component__WEBPACK_IMPORTED_MODULE_4__["WorksComponent"] },
+    { path: '**', redirectTo: '/experience' },
 ];
 let RoutesModule = class RoutesModule {
 };
