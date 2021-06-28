@@ -1000,12 +1000,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }, {
               color: '#f7df1e',
               name: 'JS ES6',
-              percentage: 80,
+              percentage: 92,
               image: 'js'
             }, {
               color: '#6181b6',
               name: 'PHP',
-              percentage: 80,
+              percentage: 65,
               image: 'php'
             }, {
               color: '#659ad2',
@@ -1018,17 +1018,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             skills: [{
               color: '#61dbfb',
               name: 'React',
-              percentage: 70,
+              percentage: 93,
               image: 'react'
             }, {
               color: '#e23237',
               name: 'Angular 2+',
-              percentage: 70,
+              percentage: 65,
               image: 'angular'
             }, {
               color: '#41b883',
               name: 'Vue.js',
-              percentage: 85,
+              percentage: 90,
               image: 'vue'
             }, {
               color: '#cd6799',
@@ -1048,7 +1048,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }, {
               color: '#563d7c',
               name: 'Bootstrap',
-              percentage: 90,
+              percentage: 95,
               image: 'bootstrap'
             }]
           }, {
@@ -1107,7 +1107,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }, {
               color: '#c63d14',
               name: 'Jest',
-              percentage: 50,
+              percentage: 70,
               image: 'jest'
             }, {
               color: '#1d91b4',
@@ -1213,6 +1213,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {
           var d = new Date();
           this.works = [{
+            companyImage: '/assets/images/works/hotter.png',
+            title: 'Frontend Developer',
+            companyName: 'Hotter Shoes',
+            description: 'Hotter Shoes is an english footwear brand selling in the UK, the US and several european countries.' + '<br><br>' + 'I am part of the team responsible for developing, improving and maintaining the company e-commerce: a single page React application.',
+            startDate: 1601581419000,
+            endDate: 1624913046000,
+            isCurrent: true
+          }, {
             companyImage: '/assets/images/works/crispy.png',
             title: 'Senior Frontend Developer',
             companyName: 'Crispy Bacon',
