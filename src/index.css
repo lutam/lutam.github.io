@@ -29,6 +29,8 @@ code {
   --minigame-width: calc(var(--content-width)/2);
   --minigame-card-height: calc(  calc(var(--minigame-width))/3);
 
+  --border-radius: 4px;
+
   --yellow: #fac832;
 }
 
@@ -42,4 +44,39 @@ code {
 body {
     color: black;
     background-color: white;
+}
+
+
+
+.square-one {
+  background: #bfe9dc;
+}
+
+.square-two {
+  background: var(--yellow);
+}
+
+.square-three {
+  background: #f83735;
+}
+
+.square-four {
+  background: #84b4f9;
+}
+
+.square-five {
+  background: #39948e;
+}
+
+.square-six {
+  background: #1231b5;
+
+}
+
+.square-seven {
+  background: #B6174B;
+}
+
+.square-eight {
+  background: #D6EDFF;
 }
