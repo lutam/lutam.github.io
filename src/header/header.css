@@ -1,0 +1,36 @@
+
+.App-header {
+  
+  width: 100%;
+   display: flex;
+   margin-top: var(--spacing-xl);
+   margin-bottom: var(--spacing-xl);
+   justify-content: center;
+}
+
+.App-header .header-links {
+  display: flex;
+  justify-content: flex-end;
+  width: var(--content-width);
+}
+
+
+
+.App-header .header-link {
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+  margin: auto 20px;
+  font-weight: 700;
+    color: black
+
+}
+
+.App-header .header-link:last-child {
+  margin-right: -4px;
+}
+
+.App-header .header-link:hover {
+  text-decoration: underline; 
+
+}

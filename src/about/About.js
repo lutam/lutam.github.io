@@ -1,6 +1,6 @@
-import Screen from "./Screen";
-import "./App.css";
-import MiniGame from "./mini-game/MiniGame";
+import Screen from "../Screen";
+import "./../App.css";
+import MiniGame from "../mini-game/MiniGame";
 
 export default function About() {
   return (

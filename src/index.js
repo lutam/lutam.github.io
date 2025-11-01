@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./About";
+import App from "./about/About";
 
 import { createBrowserRouter, RouterProvider } from "react-router";
-import Skills from "./Skills";
+import Skills from "./skills/Skills";
 
 
 let router = createBrowserRouter([

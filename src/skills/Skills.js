@@ -1,5 +1,5 @@
-import Screen from "./Screen";
-import "./App.css";
+import Screen from "../Screen";
+import "./../App.css";
 
 export default function About() {
   return (
