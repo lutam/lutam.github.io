@@ -1,0 +1,89 @@
+
+
+#mini-game {
+
+    box-sizing: border-box;
+    width: calc(var(--content-width)/2);
+    /* padding: var(--spacing-m); */
+}
+
+.mini-game-instructions {
+    font-size: 16px;
+    margin-top: 0
+}
+
+
+#mini-game .canvas {
+    height: var(--minigame-width);
+    width: var(--minigame-width);
+    margin: 0;
+    border: var(--minigame-borderWidth) solid black;
+    border-radius: 4px;
+    display: flex;
+    position: relative;
+}
+
+
+.square{
+    width: var(--minigame-card-height);
+    height: var(--minigame-card-height);
+    position: absolute;
+    margin: 0;
+    box-sizing: border-box;
+      align-items: center;
+      display: flex;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+}
+
+.square-inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 16px);
+    width: calc(100% - 16px);
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    border: 4px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.square-inner:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.square-one {
+  background: #bfe9dc;
+}
+
+.square-two {
+  background: var(--yellow);
+}
+
+.square-three {
+  background: #f83735;
+}
+
+.square-four {
+  background: #84b4f9;
+}
+
+.square-five {
+  background: #39948e;
+}
+
+.square-six {
+  background: #1231b5;
+
+}
+
+.square-seven {
+  background: #B6174B;
+}
+
+.square-eight {
+  background: #D6EDFF;
+}
