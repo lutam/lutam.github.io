@@ -5,8 +5,8 @@ border-radius: var(--border-radius);
   margin: 0 0;
   box-sizing: border-box;
   text-align: center;
-  width: calc(calc(var(--content-width) - calc(4 * var(--spacing-s)))/ 5);
-  height: calc(calc(var(--content-width) - calc(4 * var(--spacing-s)))/ 5);
+  width: calc(calc(var(--content-width) - calc(3 * var(--spacing-s)))/ 4);
+  height: calc(calc(var(--content-width) - calc(3 * var(--spacing-s)))/ 4);
 
 }
 
