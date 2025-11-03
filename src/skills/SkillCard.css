@@ -11,8 +11,8 @@ border-radius: var(--border-radius);
 
 @media screen and (max-width: 768px) {
     .skill-card {
-        width: calc((100% - calc( var(--spacing-m))) / 2);
-        height: calc((100% - calc(  var(--spacing-m))) /2);
+        width: calc((100vw - calc( 3 * var(--spacing-m))) / 2);
+        height: calc((100vw - calc( 3 * var(--spacing-m))) / 2);
     }
   
 }
