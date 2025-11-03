@@ -11,8 +11,17 @@ code {
     monospace;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
 
 :root {
   --content-width: 730px;
@@ -26,7 +35,10 @@ code {
 
   --minigame-borderWidth: 4px;
   --minigame-width: calc(var(--content-width)/2);
-  --minigame-card-height: calc(  calc(var(--minigame-width))/3);
+  --minigame-width-mobile: calc(100vw - calc(2 * var(--spacing-m)));
+
+  --minigame-card-height: calc(var(--minigame-width)/3);
+  --minigame-card-height-mobile: calc(var(--minigame-width-mobile)/3);
 
   --border-radius: 4px;
 

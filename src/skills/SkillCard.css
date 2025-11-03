@@ -9,6 +9,14 @@ border-radius: var(--border-radius);
 
 }
 
+@media screen and (max-width: 768px) {
+    .skill-card {
+        width: calc((100% - calc( var(--spacing-m))) / 2);
+        height: calc((100% - calc(  var(--spacing-m))) /2);
+    }
+  
+}
+
 body.dark .skill-card {
     border: 4px solid white;
 }

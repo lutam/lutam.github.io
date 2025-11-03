@@ -4,7 +4,6 @@
 
     box-sizing: border-box;
     width: calc(var(--content-width)/2);
-    /* padding: var(--spacing-m); */
 }
 
 .mini-game-instructions {
@@ -23,6 +22,14 @@
     position: relative;
 }
 
+@media screen and (max-width: 768px) {
+    #mini-game .canvas {
+        height: var(--minigame-width-mobile);
+        width: var(--minigame-width-mobile);
+    }
+  
+}
+
 body.dark #mini-game .canvas {
     border: var(--minigame-borderWidth) solid white;
 }
@@ -39,6 +46,14 @@ body.dark #mini-game .canvas {
       display: flex;
     justify-content: center;
     transition: all .3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    .square{
+        width: var(--minigame-card-height-mobile);
+        height: var(--minigame-card-height-mobile);
+    }
+  
 }
 
 .square-inner{
