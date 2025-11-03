@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "./index.scss";
 import App from "./about/About";
 
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Skills from "./skills/Skills";
+import ThemeProvider from "./ThemeProvider";
 
 
 let router = createBrowserRouter([
@@ -22,6 +23,8 @@ let router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />,
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>
 );

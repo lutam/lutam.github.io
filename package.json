@@ -1,8 +1,9 @@
 {
-  "name": "new-dev",
+  "name": "lutam-github-io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "node-sass": "^7.0.3",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router": "^7.9.5",

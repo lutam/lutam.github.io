@@ -8,7 +8,6 @@
 
 
 h1 {
- color: black;
   background-image: none;
   font-size: 50px;
   line-height: 50px;
@@ -17,8 +16,8 @@ h1 {
   margin: 0;
 }
 
+
 h2 {
-  color: black;
     background-image: none;
   font-size: 18px;
   line-height: 36px;
@@ -73,7 +72,6 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background: white;
   width: var(--content-width);
   max-width: 100%;
   position: relative;

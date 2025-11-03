@@ -12,7 +12,9 @@
   display: flex;
   justify-content: flex-end;
   width: var(--content-width);
+  flex-wrap: wrap;
 }
+
 
 
 
@@ -22,9 +24,27 @@
   font-family: 'Rubik', sans-serif;
   margin: auto 20px;
   font-weight: 700;
-    color: black
-
 }
+
+
+@media only screen and (max-width: 768px) {
+  .App-header .header-links {
+    width: calc(100% - 30px);
+  }
+
+  .App-header .header-link{
+    margin: auto 10px;
+  }
+}
+
+
+body.dark .App-header .header-link {
+    color: white;
+}
+body.light .App-header .header-link {
+    color: black;
+}
+
 
 .App-header .header-link:last-child {
   margin-right: -4px;
@@ -33,4 +53,64 @@
 .App-header .header-link:hover {
   text-decoration: underline; 
 
+}
+
+
+
+.toggle-theme {
+  border-radius: 20px;
+  border: 4px solid black;
+  width: 40px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+    display: flex;
+    align-items: center;
+      justify-content: space-between;
+
+      padding: 0 4px;
+
+}
+
+.theme-ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: all 0.3s ease;
+  z-index: 9;
+}
+
+body.dark .toggle-theme {
+    border: 4px solid white;
+}
+body.light .toggle-theme {
+    border: 4px solid black;
+}
+
+body.dark .theme-ball {
+    left: 25px;
+    background: white;
+}
+body.light .theme-ball {
+    left: 2px;
+    background: black;
+}
+
+.theme-icon {
+  font-size: 16px;
+  text-align: center;
+  width: 16px;
+
+}
+
+
+@media only screen and (max-width: 480px) {
+  .toggle-theme-container {
+   
+   margin-left: 5px;
+    
+  }
 }

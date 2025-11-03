@@ -23,6 +23,11 @@
     position: relative;
 }
 
+body.dark #mini-game .canvas {
+    border: var(--minigame-borderWidth) solid white;
+}
+
+
 
 .square{
     width: var(--minigame-card-height);
